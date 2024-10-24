@@ -330,7 +330,7 @@ export default function Home() {
         >
           <Typography
             sx={{
-              fontSize: isMobile ? "3rem" : "5rem",
+              fontSize: isMobile ? "2.5rem" : "5rem",
               fontWeight: "400",
               fontFamily: "proxima nova",
             }}
