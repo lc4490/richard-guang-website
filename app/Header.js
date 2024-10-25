@@ -193,7 +193,7 @@ const Header = ({
         </Stack>
       )}
       {isMobile && (
-        <>
+        <Box paddingRight={2.5}>
           <IconButton onClick={handleDrawerToggle}>
             <MenuIcon
               sx={{
@@ -297,7 +297,7 @@ const Header = ({
                       PaperProps: {
                         sx: {
                           backgroundColor: textColor, // Change dropdown background color
-                          color: "black", // Change text color of menu items
+                          color: "white", // Change text color of menu items
                           "& .MuiMenuItem-root": {
                             "&:hover": {
                               backgroundColor: "#555", // Change hover color for menu items
@@ -329,7 +329,7 @@ const Header = ({
               </Box>
             </Box>
           </Drawer>
-        </>
+        </Box>
       )}
     </Stack>
   );

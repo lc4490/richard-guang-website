@@ -10,7 +10,13 @@ import {
   IconButton,
   Drawer,
 } from "@mui/material";
-import { FaTiktok, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
+import {
+  FaTiktok,
+  FaInstagram,
+  FaLinkedin,
+  FaYoutube,
+  FaEnvelope,
+} from "react-icons/fa";
 
 const Footer = ({}) => {
   const isMobile = useMediaQuery("(max-width:600px)");
@@ -97,9 +103,20 @@ const Footer = ({}) => {
             <Typography sx={{ fontFamily: "helvetica", fontWeight: "100" }}>
               +1 (718) 496 7914
             </Typography>
-            <Typography sx={{ fontFamily: "helvetica", fontWeight: "100" }}>
-              RGUANG@ELLIMAN.COM
-            </Typography>
+            <Button href="mailto:rguang@elliman.com?...">
+              <Box gap={1} display="flex" flexDirection="row">
+                <FaEnvelope style={{ fontSize: "20px", color: "black" }} />
+                <Typography
+                  sx={{
+                    color: "black",
+                    fontFamily: "helvetica",
+                    fontWeight: "100",
+                  }}
+                >
+                  RGUANG@ELLIMAN.COM
+                </Typography>
+              </Box>
+            </Button>
           </Stack>
         </Stack>
       )}
@@ -122,9 +139,20 @@ const Footer = ({}) => {
             <Typography sx={{ fontFamily: "helvetica", fontWeight: "100" }}>
               +1 (718) 496 7914
             </Typography>
-            <Typography sx={{ fontFamily: "helvetica", fontWeight: "100" }}>
-              RGUANG@ELLIMAN.COM
-            </Typography>
+            <Button href="mailto:rguang@elliman.com?...">
+              <Box gap={1} display="flex" flexDirection="row">
+                <FaEnvelope style={{ fontSize: "20px", color: "black" }} />
+                <Typography
+                  sx={{
+                    color: "black",
+                    fontFamily: "helvetica",
+                    fontWeight: "100",
+                  }}
+                >
+                  RGUANG@ELLIMAN.COM
+                </Typography>
+              </Box>
+            </Button>
 
             <Typography sx={{ fontFamily: "helvetica", fontWeight: "100" }}>
               WECHAT: guang-rich

@@ -67,7 +67,7 @@ export default function Home() {
             page={"about"}
           />
         </Box>
-        <Box height="100%">
+        <Box height={isMobile ? "100%" : "100vh"}>
           {!isMobile && (
             <Stack
               width="100%"
@@ -91,30 +91,19 @@ export default function Home() {
 
                 <Stack marginTop={2.5} gap={2.5}>
                   <Typography sx={{ fontWeight: 200 }}>
-                    Richard Guang is a graduate of the MIT Sloan School of
-                    Management where he studied Finance and Statistics. He has a
-                    fierce work ethic, tenacious drive to succeed, and an
-                    ability to establish rapport with all people. Born and
-                    raised in New York City, Richard&#39;s expertise and vast
-                    knowledge of the city ensures the highest caliber of service
-                    to his clients, whether it be buying, selling, investing, or
-                    renting a property.
+                    {t(
+                      "Richard Guang is a graduate of the MIT Sloan School of Management where he studied Finance and Statistics. He has a fierce work ethic, tenacious drive to succeed, and an ability to establish rapport with all people. Born and raised in New York City, Richard's expertise and vast knowledge of the city ensures the highest caliber of service to his clients, whether it be buying, selling, investing, or renting a property."
+                    )}
                   </Typography>
                   <Typography sx={{ fontWeight: 200 }}>
-                    He has previously worked at JP Morgan Private Bank, various
-                    asset management firms in New York, and is currently a
-                    member of the Real Estate Board of New York. He has also
-                    been helping his family manage various properties throughout
-                    the city from a young age. A lifelong athlete and
-                    competitor, Richard enjoys running, calisthenics, and
-                    biking.
+                    {t(
+                      "He has previously worked at JP Morgan Private Bank, various asset management firms in New York, and is currently a member of the Real Estate Board of New York. He has also been helping his family manage various properties throughout the city from a young age. A lifelong athlete and competitor, Richard enjoys running, calisthenics, and biking."
+                    )}
                   </Typography>
                   <Typography sx={{ fontWeight: 200 }}>
-                    Richard&#39;s ability to adapt quickly and to challenge the
-                    status quo makes him a dynamic player who can find the
-                    solution to any problem. He is passionate about luxury real
-                    estate and loves leading individuals, families, and
-                    investors to achieve their real estate aspirations.
+                    {t(
+                      "Richard's ability to adapt quickly and to challenge the status quo makes him a dynamic player who can find the solution to any problem. He is passionate about luxury real estate and loves leading individuals, families, and investors to achieve their real estate aspirations."
+                    )}
                   </Typography>
                 </Stack>
               </Stack>
@@ -154,29 +143,19 @@ export default function Home() {
               ></Box>
               <Stack paddingX={2} marginTop={2.5} gap={2.5}>
                 <Typography sx={{ fontWeight: 200 }}>
-                  Richard Guang is a graduate of the MIT Sloan School of
-                  Management where he studied Finance and Statistics. He has a
-                  fierce work ethic, tenacious drive to succeed, and an ability
-                  to establish rapport with all people. Born and raised in New
-                  York City, Richard&#39;s expertise and vast knowledge of the
-                  city ensures the highest caliber of service to his clients,
-                  whether it be buying, selling, investing, or renting a
-                  property.
+                  {t(
+                    "Richard Guang is a graduate of the MIT Sloan School of Management where he studied Finance and Statistics. He has a fierce work ethic, tenacious drive to succeed, and an ability to establish rapport with all people. Born and raised in New York City, Richard's expertise and vast knowledge of the city ensures the highest caliber of service to his clients, whether it be buying, selling, investing, or renting a property."
+                  )}
                 </Typography>
                 <Typography sx={{ fontWeight: 200 }}>
-                  He has previously worked at JP Morgan Private Bank, various
-                  asset management firms in New York, and is currently a member
-                  of the Real Estate Board of New York. He has also been helping
-                  his family manage various properties throughout the city from
-                  a young age. A lifelong athlete and competitor, Richard enjoys
-                  running, calisthenics, and biking.
+                  {t(
+                    "He has previously worked at JP Morgan Private Bank, various asset management firms in New York, and is currently a member of the Real Estate Board of New York. He has also been helping his family manage various properties throughout the city from a young age. A lifelong athlete and competitor, Richard enjoys running, calisthenics, and biking."
+                  )}
                 </Typography>
                 <Typography sx={{ fontWeight: 200 }}>
-                  Richard&#39;s ability to adapt quickly and to challenge the
-                  status quo makes him a dynamic player who can find the
-                  solution to any problem. He is passionate about luxury real
-                  estate and loves leading individuals, families, and investors
-                  to achieve their real estate aspirations.
+                  {t(
+                    "Richard's ability to adapt quickly and to challenge the status quo makes him a dynamic player who can find the solution to any problem. He is passionate about luxury real estate and loves leading individuals, families, and investors to achieve their real estate aspirations."
+                  )}
                 </Typography>
               </Stack>
             </Stack>
