@@ -246,7 +246,11 @@ const Header = ({
               <Button disableRipple sx={{ color: "black", fontWeight: "100" }}>
                 {t("Foreign Investor Guide")}
               </Button>
-              <Button disableRipple sx={{ color: "black", fontWeight: "100" }}>
+              <Button
+                href="/neighborhood-guide"
+                disableRipple
+                sx={{ color: "black", fontWeight: "100" }}
+              >
                 {t("Neighborhood Guide")}
               </Button>
               <Button

@@ -12,6 +12,7 @@ import {
   IconButton,
   Drawer,
   Grid,
+  Modal,
 } from "@mui/material";
 
 import Image from "next/image";
@@ -54,6 +55,14 @@ export default function Home() {
     { name: "Lower East Side", image: "/lower-east-side.jpg" },
     { name: "Flatiron District", image: "/flatiron.jpg" },
   ];
+
+  // description modal
+  const [openDesModal, setOpenDesModal] = useState(false);
+  const [selectedLocation, setSelectedLocation] = useState(0);
+  const handleDesModal = (index) => {
+    setSelectedLocation(index);
+    setOpenDesModal(true);
+  };
   return (
     <>
       <Box
@@ -69,6 +78,43 @@ export default function Home() {
           paddingY: 2,
         }}
       >
+        {/* description modal */}
+        <Modal open={openDesModal} onClose={() => setOpenDesModal(false)}>
+          <Box
+            overflow="auto"
+            sx={{
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+              width: "100%",
+              height: "100%",
+              bgcolor: "background.default",
+              //   border: "2px solid #000",
+              boxShadow: 24,
+              p: 4,
+              display: "flex",
+              flexDirection: "column",
+            }}
+          >
+            <Box
+              width="100%"
+              display="flex"
+              justifyContent="end"
+              onClick={() => setOpenDesModal(false)}
+            >
+              <CloseIcon sx={{ fontSize: "1.5rem" }} />
+            </Box>{" "}
+            {locations[selectedLocation].name}
+            <Image
+              src={locations[selectedLocation].image}
+              alt="banner"
+              width={400} // These should be the actual dimensions of the image
+              height={400} // Aspect ratio based on these dimensions
+              style={{ width: "100%", height: "auto", objectFit: "contain" }} // This retains the aspect ratio
+            />
+          </Box>
+        </Modal>
         <Box sx={{ paddingLeft: isMobile ? 2.5 : 5 }}>
           <Header
             t={t}
@@ -100,7 +146,7 @@ export default function Home() {
               <Button
                 key={index}
                 // href={link}
-                // onClick={() => handleDesModal(index)}
+                onClick={() => handleDesModal(index)}
                 target="_blank"
                 sx={{
                   width: "100%",
