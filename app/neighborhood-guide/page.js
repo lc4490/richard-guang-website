@@ -83,97 +83,97 @@ export default function Home() {
       name: "Chelsea",
       image: "/chelsea.jpg",
       overview:
-        "The Upper East Side (UES) is known for its historic architecture, luxurious residences, and cultural landmarks. Stretching from Central Park to the East River, it’s one of the wealthiest neighborhoods in NYC, with a mix of upscale townhouses, pre-war buildings, and modern high-rises.",
+        "Chelsea is a vibrant, trendy neighborhood known for its art galleries, the High Line Park, and Chelsea Market. It's home to a creative community, with a mix of old warehouses, luxury condos, and brownstones.",
       culture:
-        "The UES is home to the Museum Mile, which includes renowned institutions like the Metropolitan Museum of Art, Guggenheim, and Frick Collection. The area exudes a more traditional and sophisticated atmosphere compared to downtown.",
+        "The neighborhood is a hub for contemporary art, with numerous galleries located in converted warehouses, particularly around 20th to 29th Streets. It also has a strong LGBTQ+ presence and nightlife.",
       lifestyle:
-        "Life on the UES is refined and quiet, with high-end boutiques, designer stores on Madison Avenue, and Michelin-starred restaurants. The neighborhood attracts families and professionals looking for a mix of luxury and convenience.",
+        "Chelsea offers a dynamic mix of creative, upscale living. The High Line brings a unique outdoor space, and Chelsea Piers offers recreational activities. There are plenty of cafes, restaurants, and boutique shopping options.",
       transportation:
-        "The 4, 5, 6 subway lines run along Lexington Avenue, with the newer Q line running down Second Avenue. Several bus lines and easy access to Central Park make getting around convenient.",
+        "The C, E lines serve Eighth Avenue, while the 1 line runs along Seventh Avenue, making it easy to commute to different parts of Manhattan.",
     },
     {
       name: "Greenwhich Village",
       image: "/greenwhich-village.jpg",
       overview:
-        "The Upper East Side (UES) is known for its historic architecture, luxurious residences, and cultural landmarks. Stretching from Central Park to the East River, it’s one of the wealthiest neighborhoods in NYC, with a mix of upscale townhouses, pre-war buildings, and modern high-rises.",
+        "Greenwich Village is one of NYC’s most historic and iconic neighborhoods, famous for its bohemian vibe, tree-lined streets, and charming townhouses. It has long been a center for artists, writers, and musicians.",
       culture:
-        "The UES is home to the Museum Mile, which includes renowned institutions like the Metropolitan Museum of Art, Guggenheim, and Frick Collection. The area exudes a more traditional and sophisticated atmosphere compared to downtown.",
+        "The neighborhood has a rich cultural history, once home to the beat generation and later a hub for the LGBTQ+ movement. It’s also the location of Washington Square Park and NYU.",
       lifestyle:
-        "Life on the UES is refined and quiet, with high-end boutiques, designer stores on Madison Avenue, and Michelin-starred restaurants. The neighborhood attracts families and professionals looking for a mix of luxury and convenience.",
+        "Greenwich Village offers a laid-back, artistic lifestyle with an emphasis on local cafes, bookstores, music venues, and boutique shops. It has a close-knit, community feel.",
       transportation:
-        "The 4, 5, 6 subway lines run along Lexington Avenue, with the newer Q line running down Second Avenue. Several bus lines and easy access to Central Park make getting around convenient.",
+        "The A, C, E, B, D, F, M lines, as well as the 1, 2, 3 lines, serve Greenwich Village, offering easy access to other parts of Manhattan and beyond.",
     },
     {
       name: "Financial District (FiDi)",
       image: "/financial-district.jpg",
       overview:
-        "The Upper East Side (UES) is known for its historic architecture, luxurious residences, and cultural landmarks. Stretching from Central Park to the East River, it’s one of the wealthiest neighborhoods in NYC, with a mix of upscale townhouses, pre-war buildings, and modern high-rises.",
+        "The Financial District (FiDi) is home to Wall Street and the New York Stock Exchange, making it a hub for business and finance. In recent years, it has also become a desirable residential neighborhood, with many luxury condos rising.",
       culture:
-        "The UES is home to the Museum Mile, which includes renowned institutions like the Metropolitan Museum of Art, Guggenheim, and Frick Collection. The area exudes a more traditional and sophisticated atmosphere compared to downtown.",
+        "FiDi’s history as a financial hub is visible in landmarks like the New York Stock Exchange, Federal Hall, and One World Trade Center. The area is rich in history, blending the old with the new.",
       lifestyle:
-        "Life on the UES is refined and quiet, with high-end boutiques, designer stores on Madison Avenue, and Michelin-starred restaurants. The neighborhood attracts families and professionals looking for a mix of luxury and convenience.",
+        "Living in FiDi offers a mix of high-powered, fast-paced weekdays and quieter weekends. It’s known for luxury high-rises, dining options, and proximity to Battery Park and the waterfront.",
       transportation:
-        "The 4, 5, 6 subway lines run along Lexington Avenue, with the newer Q line running down Second Avenue. Several bus lines and easy access to Central Park make getting around convenient.",
+        "FiDi is extremely well-connected with numerous subway lines converging here, including the 2, 3, 4, 5, A, C, J, Z, R lines. The nearby PATH train also connects to New Jersey.",
     },
     {
       name: "Tribeca",
       image: "/tribeca.jpg",
       overview:
-        "The Upper East Side (UES) is known for its historic architecture, luxurious residences, and cultural landmarks. Stretching from Central Park to the East River, it’s one of the wealthiest neighborhoods in NYC, with a mix of upscale townhouses, pre-war buildings, and modern high-rises.",
+        "Tribeca, short for Triangle Below Canal Street, is one of Manhattan’s most exclusive and expensive neighborhoods, known for its luxury lofts and cobblestone streets. Originally an industrial area, it has transformed into a hotspot for wealthy professionals, celebrities, and families.",
       culture:
-        "The UES is home to the Museum Mile, which includes renowned institutions like the Metropolitan Museum of Art, Guggenheim, and Frick Collection. The area exudes a more traditional and sophisticated atmosphere compared to downtown.",
+        "Tribeca is home to the Tribeca Film Festival and is known for its thriving arts scene and top-tier restaurants. Its galleries, cultural events, and festivals give it a dynamic and creative edge.",
       lifestyle:
-        "Life on the UES is refined and quiet, with high-end boutiques, designer stores on Madison Avenue, and Michelin-starred restaurants. The neighborhood attracts families and professionals looking for a mix of luxury and convenience.",
+        "Tribeca offers a blend of quiet, upscale living with proximity to lower Manhattan’s business districts. It's a favorite among families looking for spacious, converted lofts and townhouses, while also attracting celebrities for its privacy.",
       transportation:
-        "The 4, 5, 6 subway lines run along Lexington Avenue, with the newer Q line running down Second Avenue. Several bus lines and easy access to Central Park make getting around convenient.",
+        "The 1, 2, 3, A, C, E subway lines make Tribeca easily accessible to other parts of Manhattan, while its location near the Hudson River offers scenic walking paths.",
     },
     {
       name: "Soho",
       image: "/soho.jpg",
       overview:
-        "The Upper East Side (UES) is known for its historic architecture, luxurious residences, and cultural landmarks. Stretching from Central Park to the East River, it’s one of the wealthiest neighborhoods in NYC, with a mix of upscale townhouses, pre-war buildings, and modern high-rises.",
+        "SoHo (South of Houston Street) is famous for its cast-iron buildings and upscale boutiques. Once a hub for artists, it’s now known for luxury lofts, high-end shopping, and art galleries.",
       culture:
-        "The UES is home to the Museum Mile, which includes renowned institutions like the Metropolitan Museum of Art, Guggenheim, and Frick Collection. The area exudes a more traditional and sophisticated atmosphere compared to downtown.",
+        "SoHo’s artistic roots are still visible through its galleries, museums, and unique shops. The neighborhood is also a major fashion destination, with designer boutiques and flagship stores along its iconic cobblestone streets.",
       lifestyle:
-        "Life on the UES is refined and quiet, with high-end boutiques, designer stores on Madison Avenue, and Michelin-starred restaurants. The neighborhood attracts families and professionals looking for a mix of luxury and convenience.",
+        "Living in SoHo means being surrounded by creativity and luxury. Residents enjoy chic loft living, with quick access to high-end dining, shopping, and art. It’s popular with fashion enthusiasts, artists, and affluent professionals.",
       transportation:
-        "The 4, 5, 6 subway lines run along Lexington Avenue, with the newer Q line running down Second Avenue. Several bus lines and easy access to Central Park make getting around convenient.",
+        "SoHo is well-served by the C, E, R, W, N, 6 subway lines, offering easy access to Midtown, the Financial District, and Brooklyn.",
     },
     {
       name: "East Village",
       image: "/east-village.jpg",
       overview:
-        "The Upper East Side (UES) is known for its historic architecture, luxurious residences, and cultural landmarks. Stretching from Central Park to the East River, it’s one of the wealthiest neighborhoods in NYC, with a mix of upscale townhouses, pre-war buildings, and modern high-rises.",
+        "The East Village has a storied history as a hub for counterculture, art, and music. It’s known for its vibrant nightlife, eclectic dining scene, and artistic community, offering a more bohemian vibe compared to its neighboring areas.",
       culture:
-        "The UES is home to the Museum Mile, which includes renowned institutions like the Metropolitan Museum of Art, Guggenheim, and Frick Collection. The area exudes a more traditional and sophisticated atmosphere compared to downtown.",
+        "The East Village was once the epicenter of the punk rock movement and continues to be a cultural hotspot with music venues, art galleries, and independent theaters. The area has a rich immigrant history, particularly from Eastern European and Latin American communities.",
       lifestyle:
-        "Life on the UES is refined and quiet, with high-end boutiques, designer stores on Madison Avenue, and Michelin-starred restaurants. The neighborhood attracts families and professionals looking for a mix of luxury and convenience.",
+        "The East Village offers a lively, youthful atmosphere, with countless bars, restaurants, and coffee shops. The neighborhood appeals to creatives, students, and young professionals who enjoy its laid-back and quirky character.",
       transportation:
-        "The 4, 5, 6 subway lines run along Lexington Avenue, with the newer Q line running down Second Avenue. Several bus lines and easy access to Central Park make getting around convenient.",
+        "The L, 6, N, R subway lines connect the East Village to other parts of Manhattan and Brooklyn, while numerous bus routes make transportation easy.",
     },
     {
       name: "Lower East Side",
       image: "/lower-east-side.jpg",
       overview:
-        "The Upper East Side (UES) is known for its historic architecture, luxurious residences, and cultural landmarks. Stretching from Central Park to the East River, it’s one of the wealthiest neighborhoods in NYC, with a mix of upscale townhouses, pre-war buildings, and modern high-rises.",
+        "The Lower East Side (LES) is one of Manhattan’s trendiest neighborhoods, with a mix of new developments and historic tenement buildings. Known for its immigrant roots, the LES has transformed into a hotspot for nightlife and dining.",
       culture:
-        "The UES is home to the Museum Mile, which includes renowned institutions like the Metropolitan Museum of Art, Guggenheim, and Frick Collection. The area exudes a more traditional and sophisticated atmosphere compared to downtown.",
+        "LES is famous for its immigrant history, particularly Jewish, Italian, and Chinese communities. It’s also home to some of the city’s best nightlife, with bars, live music venues, and art galleries.",
       lifestyle:
-        "Life on the UES is refined and quiet, with high-end boutiques, designer stores on Madison Avenue, and Michelin-starred restaurants. The neighborhood attracts families and professionals looking for a mix of luxury and convenience.",
+        "Residents of the LES enjoy a mix of old and new, with luxury condos rising alongside older, more affordable buildings. The nightlife scene is one of the most active in the city, and the food scene features everything from street food to Michelin-starred restaurants.",
       transportation:
-        "The 4, 5, 6 subway lines run along Lexington Avenue, with the newer Q line running down Second Avenue. Several bus lines and easy access to Central Park make getting around convenient.",
+        "The F, M, J, Z subway lines make it easy to travel from LES to other parts of the city.",
     },
     {
       name: "Flatiron District",
       image: "/flatiron.jpg",
       overview:
-        "The Upper East Side (UES) is known for its historic architecture, luxurious residences, and cultural landmarks. Stretching from Central Park to the East River, it’s one of the wealthiest neighborhoods in NYC, with a mix of upscale townhouses, pre-war buildings, and modern high-rises.",
+        "The Flatiron District is named after the iconic Flatiron Building and is known for its combination of historic architecture and modern amenities. It’s a central Manhattan neighborhood that offers a mix of commercial and residential living.",
       culture:
-        "The UES is home to the Museum Mile, which includes renowned institutions like the Metropolitan Museum of Art, Guggenheim, and Frick Collection. The area exudes a more traditional and sophisticated atmosphere compared to downtown.",
+        "Flatiron is home to the Museum of Sex, a hub for foodies with the Eataly food hall, and nearby Madison Square Park. The area’s rich history and central location make it a cultural and business hub.",
       lifestyle:
-        "Life on the UES is refined and quiet, with high-end boutiques, designer stores on Madison Avenue, and Michelin-starred restaurants. The neighborhood attracts families and professionals looking for a mix of luxury and convenience.",
+        "Living in the Flatiron District offers a vibrant, cosmopolitan lifestyle with upscale dining, shopping, and easy access to the rest of the city. It’s ideal for professionals and young families who want the convenience of Midtown but with more character.",
       transportation:
-        "The 4, 5, 6 subway lines run along Lexington Avenue, with the newer Q line running down Second Avenue. Several bus lines and easy access to Central Park make getting around convenient.",
+        "Flatiron is well-connected by the N, R, W, 6 subway lines, making it a great central hub for commuting.",
     },
   ];
 
