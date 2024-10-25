@@ -54,6 +54,10 @@ const Header = ({
               fontWeight: "100",
               textDecoration: page == "about" ? "underline" : "none",
               textUnderlineOffset: "4px",
+              "&:hover": {
+                textDecoration: "underline",
+                textUnderlineOffset: "4px",
+              },
             }}
           >
             {t("About")}
@@ -62,25 +66,57 @@ const Header = ({
             href="https://www.elliman.com/newyorkcity/sales/ny-usa/price-high-sort/527-a-df24061116065265311-agentid"
             target="_blank"
             disableRipple
-            sx={{ color: textColor, fontWeight: "100", fontSize: "0.85rem" }}
+            sx={{
+              color: textColor,
+              fontWeight: "100",
+              fontSize: "0.85rem",
+              "&:hover": {
+                textDecoration: "underline",
+                textUnderlineOffset: "4px",
+              },
+            }}
           >
             {t("Listing")}
           </Button>
           <Button
             disableRipple
-            sx={{ color: textColor, fontWeight: "100", fontSize: "0.85rem" }}
+            sx={{
+              color: textColor,
+              fontWeight: "100",
+              fontSize: "0.85rem",
+              "&:hover": {
+                textDecoration: "underline",
+                textUnderlineOffset: "4px",
+              },
+            }}
           >
             {t("Foreign Investor Guide")}
           </Button>
           <Button
             disableRipple
-            sx={{ color: textColor, fontWeight: "100", fontSize: "0.85rem" }}
+            sx={{
+              color: textColor,
+              fontWeight: "100",
+              fontSize: "0.85rem",
+              "&:hover": {
+                textDecoration: "underline",
+                textUnderlineOffset: "4px",
+              },
+            }}
           >
             {t("Neighborhood Guide")}
           </Button>
           <Button
             disableRipple
-            sx={{ color: textColor, fontWeight: "100", fontSize: "0.85rem" }}
+            sx={{
+              color: textColor,
+              fontWeight: "100",
+              fontSize: "0.85rem",
+              "&:hover": {
+                textDecoration: "underline",
+                textUnderlineOffset: "4px",
+              },
+            }}
           >
             {t("Contact")}
           </Button>
