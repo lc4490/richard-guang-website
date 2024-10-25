@@ -45,7 +45,7 @@ export default function Home() {
           backgroundImage: "url(/house1.png)",
           backgroundPosition: "center", // Center the image in the Box
           // backgroundSize: "50%",
-          paddingLeft: 5,
+          paddingLeft: isMobile ? 2.5 : 5,
           paddingY: 2,
         }}
       >

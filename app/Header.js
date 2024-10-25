@@ -59,6 +59,8 @@ const Header = ({
             {t("About")}
           </Button>
           <Button
+            href="https://www.elliman.com/newyorkcity/sales/ny-usa/price-high-sort/527-a-df24061116065265311-agentid"
+            target="_blank"
             disableRipple
             sx={{ color: textColor, fontWeight: "100", fontSize: "0.85rem" }}
           >
@@ -185,7 +187,16 @@ const Header = ({
               >
                 <CloseIcon sx={{ fontSize: "1.5rem" }} />
               </Box>
-              <Button disableRipple sx={{ color: "black", fontWeight: "100" }}>
+              <Button
+                href="/about"
+                disableRipple
+                sx={{
+                  color: "black",
+                  fontWeight: "100",
+                  textDecoration: page == "about" ? "underline" : "none",
+                  textUnderlineOffset: "4px",
+                }}
+              >
                 {t("About")}
               </Button>
               <Button disableRipple sx={{ color: "black", fontWeight: "100" }}>

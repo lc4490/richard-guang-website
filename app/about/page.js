@@ -51,41 +51,106 @@ export default function Home() {
           //   backgroundImage: "url(/house1.png)",
           backgroundPosition: "center", // Center the image in the Box
           // backgroundSize: "50%",
-          paddingLeft: 5,
+          paddingLeft: isMobile ? 0 : 5,
           paddingY: 2,
         }}
       >
-        <Header
-          t={t}
-          isMobile={isMobile}
-          prefLanguage={prefLanguage}
-          handleLanguageChange={handleLanguageChange}
-          handleDrawerToggle={handleDrawerToggle}
-          textColor={"black"}
-          page={"about"}
-        />
+        <Box sx={{ paddingLeft: isMobile ? 2.5 : 0 }}>
+          <Header
+            t={t}
+            isMobile={isMobile}
+            prefLanguage={prefLanguage}
+            handleLanguageChange={handleLanguageChange}
+            handleDrawerToggle={handleDrawerToggle}
+            textColor={"black"}
+            drawerOpen={drawerOpen}
+            page={"about"}
+          />
+        </Box>
         <Box height="100%">
-          <Stack
-            width="100%"
-            height="100%"
-            flexDirection="row"
-            display="flex"
-            justifyContent="space-between"
-          >
+          {!isMobile && (
             <Stack
-              flexDirection={"column"}
-              marginTop={25}
-              width="50%"
-              paddingRight={2.5}
+              width="100%"
+              height="100%"
+              flexDirection="row"
+              display="flex"
+              justifyContent="space-between"
             >
-              <Typography sx={{ fontSize: "4.5rem", lineHeight: "1.25" }}>
-                {t("ABOUT")}
-              </Typography>
-              <Typography sx={{ fontSize: "4.5rem", lineHeight: "1.25" }}>
-                {t("RICHARD GUANG")}
-              </Typography>
+              <Stack
+                flexDirection={"column"}
+                marginTop={25}
+                width="50%"
+                paddingRight={2.5}
+              >
+                <Typography sx={{ fontSize: "4.5rem", lineHeight: "1.25" }}>
+                  {t("ABOUT")}
+                </Typography>
+                <Typography sx={{ fontSize: "4.5rem", lineHeight: "1.25" }}>
+                  {t("RICHARD GUANG")}
+                </Typography>
 
-              <Stack marginTop={2.5} gap={2.5}>
+                <Stack marginTop={2.5} gap={2.5}>
+                  <Typography sx={{ fontWeight: 200 }}>
+                    Richard Guang is a graduate of the MIT Sloan School of
+                    Management where he studied Finance and Statistics. He has a
+                    fierce work ethic, tenacious drive to succeed, and an
+                    ability to establish rapport with all people. Born and
+                    raised in New York City, Richard&#39;s expertise and vast
+                    knowledge of the city ensures the highest caliber of service
+                    to his clients, whether it be buying, selling, investing, or
+                    renting a property.
+                  </Typography>
+                  <Typography sx={{ fontWeight: 200 }}>
+                    He has previously worked at JP Morgan Private Bank, various
+                    asset management firms in New York, and is currently a
+                    member of the Real Estate Board of New York. He has also
+                    been helping his family manage various properties throughout
+                    the city from a young age. A lifelong athlete and
+                    competitor, Richard enjoys running, calisthenics, and
+                    biking.
+                  </Typography>
+                  <Typography sx={{ fontWeight: 200 }}>
+                    Richard&#39;s ability to adapt quickly and to challenge the
+                    status quo makes him a dynamic player who can find the
+                    solution to any problem. He is passionate about luxury real
+                    estate and loves leading individuals, families, and
+                    investors to achieve their real estate aspirations.
+                  </Typography>
+                </Stack>
+              </Stack>
+              <Box
+                width="50%"
+                //   height="100%"
+                sx={{
+                  backgroundImage: "url(/richard.png)",
+                  backgroundPosition: "center",
+                  backgroundSize: "100%",
+                }}
+              ></Box>
+            </Stack>
+          )}
+          {isMobile && (
+            <Stack flexDirection={"column"} marginTop={5}>
+              <Box sx={{ paddingLeft: isMobile ? 2.5 : 0 }}>
+                <Typography sx={{ fontSize: "2.5rem", lineHeight: "1.25" }}>
+                  {t("ABOUT")}
+                </Typography>
+                <Typography sx={{ fontSize: "2.5rem", lineHeight: "1.25" }}>
+                  {t("RICHARD GUANG")}
+                </Typography>
+              </Box>
+              <Box
+                // width="50%"
+                backgroundColor="green"
+                // width="500px"
+                height="550px"
+                sx={{
+                  backgroundImage: "url(/richard.png)",
+                  backgroundPosition: "center",
+                  backgroundSize: "100%",
+                }}
+              ></Box>
+              <Stack paddingX={2} marginTop={2.5} gap={2.5}>
                 <Typography sx={{ fontWeight: 200 }}>
                   Richard Guang is a graduate of the MIT Sloan School of
                   Management where he studied Finance and Statistics. He has a
@@ -113,16 +178,7 @@ export default function Home() {
                 </Typography>
               </Stack>
             </Stack>
-            <Box
-              width="50%"
-              //   height="100%"
-              sx={{
-                backgroundImage: "url(/richard.png)",
-                backgroundPosition: "center",
-                backgroundSize: "100%",
-              }}
-            ></Box>
-          </Stack>
+          )}
         </Box>
       </Box>
       <Footer />
