@@ -7,26 +7,25 @@ const resources = {
     translation: {
       "RICHARD GUANG": "RICHARD GUANG",
       About: "About",
-      Listing: "Listing",
+      Listing: "Listings",
       "Foreign Investor Guide": "Foreign Investor Guide",
       "Neighborhood Guide": "Neighborhood Guide",
       Contact: "Contact",
       "REAL ESTATE": "REAL ESTATE",
+      ABOUT: "ABOUT",
     },
   },
   cn: {
     translation: {
-      //   "RICHARD GUANG": "你好",
-      About: "关于Richard",
+      "RICHARD GUANG": "管赐盛",
+      About: "关于管赐盛",
       Listing: "房源列表",
       "Foreign Investor Guide": "外国投资者指南",
       "Neighborhood Guide": "社区指南",
       Contact: "联系我们",
       "REAL ESTATE": "地产",
+      ABOUT: "关于",
     },
-  },
-  tc: {
-    translation: {},
   },
 };
 
