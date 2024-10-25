@@ -113,17 +113,23 @@ const Footer = ({}) => {
           alignItems="center"
           gap={2}
         >
-          <Stack flexDirection={"row"} justifyContent={"space-between"} gap={5}>
+          <Stack
+            flexDirection={"column"}
+            // justifyContent={"space-between"}
+            alignItems={"center"}
+            gap={2}
+          >
             <Typography sx={{ fontFamily: "helvetica", fontWeight: "100" }}>
               +1 (718) 496 7914
             </Typography>
             <Typography sx={{ fontFamily: "helvetica", fontWeight: "100" }}>
               RGUANG@ELLIMAN.COM
             </Typography>
+
+            <Typography sx={{ fontFamily: "helvetica", fontWeight: "100" }}>
+              WECHAT: guang-rich
+            </Typography>
           </Stack>
-          <Typography sx={{ fontFamily: "helvetica", fontWeight: "100" }}>
-            WECHAT: guang-rich
-          </Typography>
           <Stack flexDirection="row">
             <Button
               href="https://www.instagram.com/richard.guang/"

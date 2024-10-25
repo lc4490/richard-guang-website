@@ -125,6 +125,7 @@ export default function Home() {
                   backgroundImage: "url(/richard.png)",
                   backgroundPosition: "center",
                   backgroundSize: "100%",
+                  backgroundRepeat: "no-repeat", // Prevent the image from repeating
                 }}
               ></Box>
             </Stack>
@@ -141,13 +142,14 @@ export default function Home() {
               </Box>
               <Box
                 // width="50%"
-                backgroundColor="green"
+                // backgroundColor="green"
                 // width="500px"
                 height="550px"
                 sx={{
                   backgroundImage: "url(/richard.png)",
                   backgroundPosition: "center",
                   backgroundSize: "100%",
+                  backgroundRepeat: "no-repeat", // Prevent the image from repeating
                 }}
               ></Box>
               <Stack paddingX={2} marginTop={2.5} gap={2.5}>

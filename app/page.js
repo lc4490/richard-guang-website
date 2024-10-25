@@ -44,7 +44,8 @@ export default function Home() {
           height: "100vh",
           backgroundImage: "url(/house1.png)",
           backgroundPosition: "center", // Center the image in the Box
-          // backgroundSize: "50%",
+          backgroundRepeat: "no-repeat", // Prevent the image from repeating
+          backgroundSize: isMobile ? "" : "100%",
           paddingLeft: isMobile ? 2.5 : 5,
           paddingY: 2,
         }}
