@@ -364,6 +364,7 @@ export default function Home() {
         <Typography sx={{ padding: 5, fontSize: "2rem" }}>
           Your Trusted Partner in Finding your Dream Home
         </Typography>
+        <Stack backgroundColor="blue" width="100%"></Stack>
       </Box>
     </>
   );

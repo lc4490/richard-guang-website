@@ -356,9 +356,10 @@ export default function Home() {
                   Management where he studied Finance and Statistics. He has a
                   fierce work ethic, tenacious drive to succeed, and an ability
                   to establish rapport with all people. Born and raised in New
-                  York City, Richard's expertise and vast knowledge of the city
-                  ensures the highest caliber of service to his clients, whether
-                  it be buying, selling, investing, or renting a property.
+                  York City, Richard&#39;s expertise and vast knowledge of the
+                  city ensures the highest caliber of service to his clients,
+                  whether it be buying, selling, investing, or renting a
+                  property.
                 </Typography>
                 <Typography sx={{ fontWeight: 200 }}>
                   He has previously worked at JP Morgan Private Bank, various
@@ -369,11 +370,11 @@ export default function Home() {
                   running, calisthenics, and biking.
                 </Typography>
                 <Typography sx={{ fontWeight: 200 }}>
-                  Richard's ability to adapt quickly and to challenge the status
-                  quo makes him a dynamic player who can find the solution to
-                  any problem. He is passionate about luxury real estate and
-                  loves leading individuals, families, and investors to achieve
-                  their real estate aspirations.
+                  Richard&#39;s ability to adapt quickly and to challenge the
+                  status quo makes him a dynamic player who can find the
+                  solution to any problem. He is passionate about luxury real
+                  estate and loves leading individuals, families, and investors
+                  to achieve their real estate aspirations.
                 </Typography>
               </Stack>
             </Stack>
