@@ -52,6 +52,7 @@ const Header = ({
             sx={{
               color: textColor,
               fontWeight: "100",
+              fontSize: "0.85rem",
               textDecoration: page == "about" ? "underline" : "none",
               textUnderlineOffset: "4px",
               "&:hover": {
@@ -94,10 +95,14 @@ const Header = ({
           </Button>
           <Button
             disableRipple
+            href="/neighborhood-guide"
             sx={{
               color: textColor,
               fontWeight: "100",
               fontSize: "0.85rem",
+              textDecoration:
+                page == "neighborhood-guide" ? "underline" : "none",
+              textUnderlineOffset: "4px",
               "&:hover": {
                 textDecoration: "underline",
                 textUnderlineOffset: "4px",
