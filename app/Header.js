@@ -251,6 +251,8 @@ const Header = ({
                 {t("About")}
               </Button>
               <Button
+                href="https://www.elliman.com/newyorkcity/sales/ny-usa/price-high-sort/527-a-df24061116065265311-agentid"
+                target="_blank"
                 disableRipple
                 sx={{
                   color: "black",

@@ -24,7 +24,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import { useState } from "react";
 
 import { useTranslation } from "react-i18next";
-import i18n from "../i18n"; // Adjust the path as necessary
+import i18n from "../i18n";
 
 import Header from "../Header";
 import Footer from "../Footer";
@@ -147,13 +147,26 @@ export default function Home() {
               key={index}
               flexDirection="column"
               alignItems="center"
+              sx={{
+                transition: "transform 0.3s ease-in-out",
+                "&:hover": {
+                  transform: "scale(1.05)",
+                },
+              }}
             >
               <Box
-                key={index}
-                boxShadow={2}
+                boxShadow={5}
                 padding={3}
-                height={isMobile ? "100%" : "250px"}
+                height={isMobile ? "100%" : "275px"}
                 borderRadius={2.5}
+                sx={{
+                  background:
+                    "linear-gradient(135deg, #f9f9f9 0%, #e0f7fa 100%)",
+                  transition: "box-shadow 0.3s ease-in-out",
+                  "&:hover": {
+                    boxShadow: "0 8px 16px rgba(0,0,0,0.15)",
+                  },
+                }}
               >
                 <Stack
                   flexDirection="row"
@@ -162,20 +175,25 @@ export default function Home() {
                   alignItems={isMobile ? "" : "center"}
                 >
                   <Box
-                    backgroundColor="blue"
-                    width={"25px"}
-                    height={"25px"}
-                    padding={2.5}
-                    borderRadius={"99999px"}
-                    display="flex"
-                    justifyContent={"center"}
-                    alignItems={"center"}
+                    sx={{
+                      background:
+                        "linear-gradient(135deg, #3f51b5 0%, #1a237e 100%)",
+                      width: "40px",
+                      height: "40px",
+                      padding: 1.5,
+                      borderRadius: "50%",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
                   >
+                    {/* You can replace this with an icon */}
                     <Typography
                       sx={{
                         color: "white",
                         fontFamily: "helvetica",
                         fontWeight: "600",
+                        fontSize: "1.25rem",
                       }}
                     >
                       {index + 1}
@@ -183,18 +201,22 @@ export default function Home() {
                   </Box>
                   <Typography
                     sx={{
-                      fontSize: isMobile ? "1rem" : "1.4rem",
-                      fontWeight: "600",
+                      fontSize: isMobile ? "1.2rem" : "1.5rem",
+                      fontWeight: "700",
+                      transition: "color 0.3s ease",
+                      "&:hover": {
+                        color: "#1a237e",
+                      },
                     }}
                   >
-                    {" "}
                     {title}
                   </Typography>
                 </Stack>
                 <Typography
                   sx={{
-                    fontWeight: "100",
-                    fontSize: isMobile ? "0.75rem" : "1rem",
+                    fontWeight: "300",
+                    fontSize: isMobile ? "0.9rem" : "1.1rem",
+                    color: "#616161",
                   }}
                 >
                   {text}

@@ -15,6 +15,9 @@ import {
   Modal,
   Paper,
   TextField,
+  Card,
+  CardContent,
+  Slide,
 } from "@mui/material";
 
 import Image from "next/image";
@@ -46,6 +49,7 @@ export default function Home() {
   };
 
   const [result, setResult] = useState("");
+  const [slideIn, setSlideIn] = useState(false);
 
   const onSubmit = async (event) => {
     event.preventDefault();
@@ -77,11 +81,7 @@ export default function Home() {
         sx={{
           width: "100%",
           height: "100%",
-
-          //   backgroundImage: "url(/house1.png)",
-          backgroundPosition: "center", // Center the image in the Box
-          // backgroundSize: "50%",
-
+          background: "linear-gradient(to right, #f8f9fa, #eceff1)",
           paddingY: 2,
         }}
       >
@@ -106,45 +106,76 @@ export default function Home() {
           <Typography
             sx={{
               fontSize: isMobile ? "2.5rem" : "4.5rem",
-              fontFamily: "",
+              fontFamily: "Roboto, sans-serif",
+              color: "#37474f",
+              fontWeight: "bold",
+              mb: 2,
             }}
           >
             {t("Contact")}
           </Typography>
         </Box>
-        <Box component="div" sx={{ maxWidth: 400, mx: "auto", paddingX: 5 }}>
-          <form onSubmit={onSubmit}>
-            <Typography variant="h6" gutterBottom>
-              {t("Name")}
-            </Typography>
-            <TextField fullWidth type="text" name="name" required />
+        <Slide direction="up" in={!slideIn} mountOnEnter unmountOnExit>
+          <Card
+            sx={{
+              maxWidth: 500,
+              mx: "auto",
+              p: 4,
+              borderRadius: 3,
+              backgroundColor: "#ffffff",
+              boxShadow: "0px 4px 10px rgba(0,0,0,0.1)",
+            }}
+          >
+            <CardContent>
+              <form onSubmit={onSubmit}>
+                <Typography variant="h6" gutterBottom>
+                  {t("Name")}
+                </Typography>
+                <TextField fullWidth type="text" name="name" required />
 
-            <Typography variant="h6" gutterBottom sx={{ mt: 2 }}>
-              {t("Email")}
-            </Typography>
-            <TextField fullWidth type="email" name="email" required />
+                <Typography variant="h6" gutterBottom sx={{ mt: 2 }}>
+                  {t("Email")}
+                </Typography>
+                <TextField fullWidth type="email" name="email" required />
 
-            <Typography variant="h6" gutterBottom sx={{ mt: 2 }}>
-              {t("Message")}
-            </Typography>
-            <TextField fullWidth multiline rows={4} name="message" required />
+                <Typography variant="h6" gutterBottom sx={{ mt: 2 }}>
+                  {t("Message")}
+                </Typography>
+                <TextField
+                  fullWidth
+                  multiline
+                  rows={4}
+                  name="message"
+                  required
+                />
 
-            <Button
-              type="submit"
-              variant="contained"
-              color="primary"
-              fullWidth
-              sx={{ mt: 3 }}
-            >
-              {t("Send")}
-            </Button>
-          </form>
-          {result && (
-            <Typography variant="body1" color="success.main" sx={{ mt: 2 }}>
-              {result}
-            </Typography>
-          )}
-        </Box>
+                <Button
+                  type="submit"
+                  variant="contained"
+                  color="primary"
+                  fullWidth
+                  sx={{
+                    mt: 3,
+                    background:
+                      "linear-gradient(135deg, #3f51b5 0%, #1a237e 100%)",
+                    color: "#ffffff",
+                    "&:hover": {
+                      backgroundColor: "#0277bd",
+                    },
+                    transition: "background-color 0.3s ease",
+                  }}
+                >
+                  {t("Send")}
+                </Button>
+              </form>
+              {result && (
+                <Typography variant="body1" color="success.main" sx={{ mt: 2 }}>
+                  {result}
+                </Typography>
+              )}
+            </CardContent>
+          </Card>
+        </Slide>
       </Box>
       <Footer />
     </>

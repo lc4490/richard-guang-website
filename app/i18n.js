@@ -160,6 +160,7 @@ const resources = {
       Email: "Email",
       Message: "Message",
       Send: "Send",
+      WECHAT: "WECHAT",
     },
   },
   cn: {
@@ -316,6 +317,7 @@ const resources = {
       Email: "邮件",
       Message: "讯息",
       Send: "发送",
+      WECHAT: "微信",
     },
   },
 };

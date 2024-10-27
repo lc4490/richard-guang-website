@@ -35,6 +35,12 @@ export default function Home() {
     i18n.changeLanguage(newLanguage);
     setPrefLanguage(newLanguage); // Update state on change
   };
+  const realEstateTexts = [
+    "Expert knowledge of NYC neighborhoods",
+    "Personalized service for both local and international clients",
+    "Specializing in luxury properties and investment opportunities",
+    "With years of experience in the New York City real estate market, I specialize in helping clients find their perfect property, whether it's for investment or a place to call home.",
+  ];
   return (
     <>
       <Box
@@ -110,134 +116,62 @@ export default function Home() {
         alignItems={"center"}
         flexDirection="column"
       >
-        <Typography
-          sx={{
-            textAlign: "center",
-            padding: 5,
-            fontSize: isMobile ? "1.5rem" : "2rem",
-          }}
-        >
-          {t("Your Trusted Partner in Finding your Dream Home")}
-        </Typography>
-        {!isMobile && (
-          <Box backgroundColor="" width="75vw" height="75vh">
+        <>
+          <Typography
+            sx={{
+              textAlign: "center",
+              padding: 5,
+              fontSize: isMobile ? "1.5rem" : "2rem",
+            }}
+          >
+            {t("Your Trusted Partner in Finding your Dream Home")}
+          </Typography>
+
+          <Box
+            backgroundColor=""
+            width={isMobile ? "90vw" : "75vw"}
+            height={isMobile ? "100%" : "75vh"}
+          >
             <Stack
+              direction={isMobile ? "column" : "row"}
               width="100%"
               height="100%"
-              flexDirection="row"
-              display="flex"
               justifyContent="space-between"
+              alignItems="center"
             >
               <Stack
-                flexDirection={"column"}
-                // marginTop={25}
-                width="75%"
-                paddingRight={2.5}
-                display="flex"
-                justifyContent={"center"}
-                alignItems={"center"}
+                width={isMobile ? "100%" : "75%"}
+                paddingRight={isMobile ? 0 : 2.5}
+                justifyContent="center"
+                alignItems="center"
+                gap={5}
               >
-                <Stack
-                  width="75%"
-                  height="100%"
-                  display="flex"
-                  justifyContent="center"
-                  gap={5}
-                  // backgroundColor="green"
-                >
+                {realEstateTexts.map((text, index) => (
                   <Typography
+                    key={index}
                     sx={{
                       textAlign: "center",
                       fontWeight: "100",
                     }}
                   >
-                    {t("Expert knowledge of NYC neighborhoods")}
+                    {t(text)}
                   </Typography>
-                  <Typography sx={{ textAlign: "center", fontWeight: "100" }}>
-                    {t(
-                      "Personalized service for both local and international clients"
-                    )}
-                  </Typography>
-                  <Typography sx={{ textAlign: "center", fontWeight: "100" }}>
-                    {t(
-                      "Specializing in luxury properties and investment opportunities"
-                    )}
-                  </Typography>
-                  <Typography sx={{ textAlign: "center", fontWeight: "100" }}>
-                    {t(
-                      "With years of experience in the New York City real estate market, I specialize in helping clients find their perfect property, whether it's for investment or a place to call home."
-                    )}
-                  </Typography>
-                </Stack>
+                ))}
               </Stack>
+
               <Box
-                width="50%"
-                //   height="100%"
+                width={isMobile ? "100%" : "50%"}
+                height={isMobile ? "400px" : "100%"}
                 sx={{
                   backgroundImage: "url(/richard.png)",
                   backgroundPosition: "center",
                   backgroundSize: "100%",
-                  backgroundRepeat: "no-repeat", // Prevent the image from repeating
+                  backgroundRepeat: "no-repeat",
                 }}
               ></Box>
             </Stack>
           </Box>
-        )}
-        {isMobile && (
-          <Box backgroundColor="" width="90vw" height="100%">
-            <Box
-              // backgroundColor="green"
-              height="400px"
-              sx={{
-                backgroundImage: "url(/richard.png)",
-                backgroundPosition: "center",
-                backgroundSize: "100%",
-                backgroundRepeat: "no-repeat", // Prevent the image from repeating
-              }}
-            ></Box>
-            <Stack
-              flexDirection={"column"}
-              width="100%"
-              display="flex"
-              justifyContent={"center"}
-              alignItems={"center"}
-            >
-              <Stack
-                width="100%"
-                height="100%"
-                display="flex"
-                justifyContent="center"
-                paddingY={2.5}
-                gap={5}
-                // backgroundColor="green"
-              >
-                <Typography
-                  sx={{
-                    textAlign: "center",
-                    fontWeight: "100",
-                  }}
-                >
-                  {t("Expert knowledge of NYC neighborhoods")}
-                </Typography>
-                <Typography sx={{ textAlign: "center", fontWeight: "100" }}>
-                  {t(
-                    "Personalized service for both local and international clients"
-                  )}
-                </Typography>
-                <Typography sx={{ textAlign: "center", fontWeight: "100" }}>
-                  {t(
-                    "Specializing in luxury properties and investment opportunities"
-                  )}
-                </Typography>
-                <Typography sx={{ textAlign: "center", fontWeight: "100" }}>
-                  {t(
-                    "With years of experience in the New York City real estate market, I specialize in helping clients find their perfect property, whether it's for investment or a place to call home."
-                  )}
-                </Typography>
-              </Stack>
-            </Stack>
-          </Box>
-        )}
+        </>
       </Box>
       <Footer />
     </>

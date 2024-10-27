@@ -18,7 +18,11 @@ import {
   FaEnvelope,
 } from "react-icons/fa";
 
+import { useTranslation } from "react-i18next";
+import i18n from "./i18n";
+
 const Footer = ({}) => {
+  const { t, i18n } = useTranslation();
   const isMobile = useMediaQuery("(max-width:600px)");
   return (
     <>
@@ -31,7 +35,7 @@ const Footer = ({}) => {
           justifyContent="space-between"
         >
           <Typography sx={{ fontFamily: "helvetica", fontWeight: "100" }}>
-            WECHAT: guang-rich
+            {t("WECHAT")}: guang-rich
           </Typography>
           <Stack flexDirection="row">
             <Button
@@ -155,7 +159,7 @@ const Footer = ({}) => {
             </Button>
 
             <Typography sx={{ fontFamily: "helvetica", fontWeight: "100" }}>
-              WECHAT: guang-rich
+              {t("WECHAT")}: guang-rich
             </Typography>
           </Stack>
           <Stack flexDirection="row">
