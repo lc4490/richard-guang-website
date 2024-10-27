@@ -13,6 +13,7 @@ import {
   Drawer,
   Grid,
   Modal,
+  Paper,
 } from "@mui/material";
 
 import Image from "next/image";
@@ -42,6 +43,32 @@ export default function Home() {
     i18n.changeLanguage(newLanguage);
     setPrefLanguage(newLanguage); // Update state on change
   };
+  const cards = [
+    {
+      title: "Why Invest in NYC Real Estate?",
+      text: "New York City offers a unique opportunity for real estate investment, combining stability, high appreciation potential, and proximity to some of the world's best universities. For parents, owning a property here not only provides a safe and convenient home for your child but also represents a smart financial investment. The NYC market is known for its resilience and long-term value, making it an ideal choice for international buyers.",
+    },
+    {
+      title: "Understanding the NYC Real Estate Market",
+      text: "The NYC real estate market is vast and varied, with neighborhoods offering different lifestyles and investment potentials. Whether you're looking for a quiet residential area near Columbia University or a vibrant, bustling location close to NYU, I can guide you through the options. Typical property types range from modern condos in high-rise buildings to classic brownstones in historic districts. I will help you navigate this complex market to find the perfect home that meets both your child's needs and your investment goals.",
+    },
+    {
+      title: "Personalized Guidance Through the Buying Process",
+      text: "When you visit New York City, I will arrange a series of property tours over 2-5 days, carefully planned around your schedule. During these tours, I will provide detailed insights into each property, highlighting both the benefits and any potential drawbacks. My priority is to ensure you have all the information you need to make an informed decision.",
+    },
+    {
+      title: "Financial Analysis and Investment Potential",
+      text: "Investing in real estate is not just about finding a home; it's about securing a valuable asset for the future. I will conduct a thorough financial analysis of each property you are interested in, assessing factors such as potential rental income, appreciation forecasts, and overall return on investment (ROI). This analysis will help you understand which properties offer the best financial benefits.",
+    },
+    {
+      title: "Offer Submission and Negotiation",
+      text: "Once you've chosen the ideal property, I will guide you in making a competitive offer. My extensive knowledge of the NYC market allows me to advise you on what price to offer based on current market conditions and the property's true value. My goal is to help you secure the property at the best possible price.",
+    },
+    {
+      title: "Seamless Closing Process",
+      text: "Closing on a property in NYC involves multiple steps, from finalizing contracts to ensuring all legal and financial obligations are met. I will coordinate closely with your legal and financial advisors to handle every detail. If you need to return to China before the transaction is complete, don't worry. I have experience managing remote closings and will ensure everything is taken care of on your behalf. Whether it's signing documents or coordinating with local authorities, I will act as your trusted representative in New York.",
+    },
+  ];
   const locations = [
     {
       name: t("Upper East Side"),
@@ -243,88 +270,6 @@ export default function Home() {
           paddingY: 2,
         }}
       >
-        {/* description modal */}
-        <Modal open={openDesModal} onClose={() => setOpenDesModal(false)}>
-          <Box
-            overflow="auto"
-            sx={{
-              position: "absolute",
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              width: "100%",
-              height: "100%",
-              bgcolor: "background.default",
-              //   border: "2px solid #000",
-              boxShadow: 24,
-              p: 4,
-              display: "flex",
-              flexDirection: "column",
-            }}
-          >
-            <Box
-              width="100%"
-              display="flex"
-              justifyContent="end"
-              onClick={() => setOpenDesModal(false)}
-            >
-              <CloseIcon sx={{ fontSize: "1.5rem" }} />
-            </Box>{" "}
-            <Box
-              width="100%"
-              display="flex"
-              justifyContent={"center"}
-              paddingY={5}
-            >
-              <Typography
-                sx={{
-                  color: "black",
-                  // fontWeight: "500",
-                  fontFamily: "helvetica",
-                  fontSize: isMobile ? "2rem" : "4rem",
-                  textTransform: "uppercase",
-                }}
-              >
-                {locations[selectedLocation].name}
-              </Typography>
-            </Box>
-            <Image
-              src={locations[selectedLocation].image}
-              alt="banner"
-              width={400} // These should be the actual dimensions of the image
-              height={400} // Aspect ratio based on these dimensions
-              style={{ width: "100%", height: "auto", objectFit: "contain" }} // This retains the aspect ratio
-            />
-            <Typography sx={{ mt: 5, fontWeight: "100" }}>
-              <strong style={{ textTransform: "uppercase" }}>
-                {t("Overview")}:
-              </strong>
-              <br />
-              {locations[selectedLocation].overview}
-            </Typography>
-            <Typography sx={{ mt: 2, fontWeight: "100" }}>
-              <strong style={{ textTransform: "uppercase" }}>
-                {t("Culture")}:
-              </strong>
-              <br />
-              {locations[selectedLocation].culture}
-            </Typography>
-            <Typography sx={{ mt: 2, fontWeight: "100" }}>
-              <strong style={{ textTransform: "uppercase" }}>
-                {t("Lifestyle")}:
-              </strong>
-              <br />
-              {locations[selectedLocation].lifestyle}
-            </Typography>
-            <Typography sx={{ mt: 2, fontWeight: "100" }}>
-              <strong style={{ textTransform: "uppercase" }}>
-                {t("Transportation")}:
-              </strong>
-              <br />
-              {locations[selectedLocation].transportation}
-            </Typography>
-          </Box>
-        </Modal>
         <Box sx={{ paddingLeft: isMobile ? 2.5 : 5 }}>
           <Header
             t={t}
@@ -334,69 +279,97 @@ export default function Home() {
             handleDrawerToggle={handleDrawerToggle}
             textColor={"black"}
             drawerOpen={drawerOpen}
-            page={"neighborhood-guide"}
+            page={"foreign-investor-guide"}
           />
         </Box>
-        <Box display="flex" justifyContent="center" padding={5}>
+        <Box
+          display="flex"
+          alignItems="center"
+          padding={5}
+          flexDirection="column"
+        >
           <Typography
             sx={{ fontSize: isMobile ? "1.4rem" : "4.5rem", fontFamily: "" }}
           >
-            {t("NEIGHBORHOOD GUIDE")}
+            {t("FOREIGN INVESTOR GUIDE")}
           </Typography>
         </Box>
-        <Grid container paddingX={2.5}>
-          {locations.map(({ name, image }, index) => (
+        <Box width={"100%"} paddingX={isMobile ? 5 : 30}>
+          <Typography
+            sx={{
+              textAlign: "center",
+              fontWeight: "100",
+              fontSize: isMobile ? "0.75rem" : "1rem",
+            }}
+          >
+            {
+              "Welcome to Richard's real estate guide for foreign investors! As a seasoned NYC real estate broker, I've had the privilege of assisting many Chinese families in securing the perfect home for their children studying in the United States. With experience helping parents whose children attend prestigious universities like NYU, Columbia, Princeton, Harvard, and MIT, I understand the unique needs and concerns you may have as you embark on this important journey."
+            }
+          </Typography>
+        </Box>
+
+        <Grid container padding={2.5} spacing={2.5}>
+          {cards.map(({ title, text }, index) => (
             <Grid
               item
               xs={12}
-              sm={4}
+              sm={6}
               key={index}
               flexDirection="column"
               alignItems="center"
-              gap={1}
             >
-              <Button
+              <Box
                 key={index}
-                // href={link}
-                onClick={() => handleDesModal(index)}
-                target="_blank"
-                sx={{
-                  width: "100%",
-                  aspectRatio: 1,
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  //   backgroundColor: "background.default",
-                  border: "1px solid background.default",
-                  borderRadius: "10px",
-                }}
+                boxShadow={2}
+                padding={3}
+                height={isMobile ? "100%" : "250px"}
+                borderRadius={2.5}
               >
-                <Image
-                  src={image}
-                  alt="temp"
-                  width={200}
-                  height={200}
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    // borderRadius: "10px",
-                    objectFit: "cover",
-                    // opacity: "50%",
-                  }}
-                />
-                <Box
-                  //   backgroundColor="red"
-                  width="100%"
-                  display="flex"
-                  justifyContent="left"
-                  paddingY={2}
+                <Stack
+                  flexDirection="row"
+                  gap={1}
+                  paddingBottom={1}
+                  alignItems={isMobile ? "" : "center"}
                 >
-                  <Typography sx={{ color: "black", fontWeight: "100" }}>
-                    {name}
+                  <Box
+                    backgroundColor="blue"
+                    width={"25px"}
+                    height={"25px"}
+                    padding={2.5}
+                    borderRadius={"99999px"}
+                    display="flex"
+                    justifyContent={"center"}
+                    alignItems={"center"}
+                  >
+                    <Typography
+                      sx={{
+                        color: "white",
+                        fontFamily: "helvetica",
+                        fontWeight: "600",
+                      }}
+                    >
+                      {index + 1}
+                    </Typography>
+                  </Box>
+                  <Typography
+                    sx={{
+                      fontSize: isMobile ? "1rem" : "1.4rem",
+                      fontWeight: "600",
+                    }}
+                  >
+                    {" "}
+                    {title}
                   </Typography>
-                </Box>
-              </Button>
+                </Stack>
+                <Typography
+                  sx={{
+                    fontWeight: "100",
+                    fontSize: isMobile ? "0.75rem" : "1rem",
+                  }}
+                >
+                  {text}
+                </Typography>
+              </Box>
             </Grid>
           ))}
         </Grid>

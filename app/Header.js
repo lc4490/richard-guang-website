@@ -81,10 +81,14 @@ const Header = ({
           </Button>
           <Button
             disableRipple
+            href="/foreign-investor-guide"
             sx={{
               color: textColor,
               fontWeight: "100",
               fontSize: "0.85rem",
+              textDecoration:
+                page == "foreign-investor-guide" ? "underline" : "none",
+              textUnderlineOffset: "4px",
               "&:hover": {
                 textDecoration: "underline",
                 textUnderlineOffset: "4px",
@@ -236,20 +240,58 @@ const Header = ({
                   fontWeight: "100",
                   textDecoration: page == "about" ? "underline" : "none",
                   textUnderlineOffset: "4px",
+                  "&:hover": {
+                    textDecoration: "underline",
+                    textUnderlineOffset: "4px",
+                  },
                 }}
               >
                 {t("About")}
               </Button>
-              <Button disableRipple sx={{ color: "black", fontWeight: "100" }}>
+              <Button
+                disableRipple
+                sx={{
+                  color: "black",
+                  fontWeight: "100",
+                  "&:hover": {
+                    textDecoration: "underline",
+                    textUnderlineOffset: "4px",
+                  },
+                }}
+              >
                 {t("Listing")}
               </Button>
-              <Button disableRipple sx={{ color: "black", fontWeight: "100" }}>
+              <Button
+                href="/foreign-investor-guide"
+                disableRipple
+                sx={{
+                  color: "black",
+                  fontWeight: "100",
+                  textDecoration:
+                    page == "foreign-investor-guide" ? "underline" : "none",
+                  textUnderlineOffset: "4px",
+                  "&:hover": {
+                    textDecoration: "underline",
+                    textUnderlineOffset: "4px",
+                  },
+                }}
+              >
                 {t("Foreign Investor Guide")}
               </Button>
               <Button
                 href="/neighborhood-guide"
                 disableRipple
-                sx={{ color: "black", fontWeight: "100" }}
+                sx={{
+                  color: "black",
+                  fontWeight: "100",
+                  textDecoration:
+                    page == "neighborhood-guide" ? "underline" : "none",
+                  textUnderlineOffset: "4px",
+                  "&:hover": {
+                    textDecoration: "underline",
+                    textUnderlineOffset: "4px",
+                  },
+                }}
               >
                 {t("Neighborhood Guide")}
               </Button>
@@ -258,6 +300,10 @@ const Header = ({
                 sx={{
                   color: "black",
                   fontWeight: "100",
+                  "&:hover": {
+                    textDecoration: "underline",
+                    textUnderlineOffset: "4px",
+                  },
                 }}
               >
                 {t("Contact")}

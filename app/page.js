@@ -57,7 +57,7 @@ export default function Home() {
             top: 0,
             left: 0,
             width: "100%",
-            height: "100%",
+            height: isMobile ? "100vh" : "100%",
             backgroundColor: "rgba(0, 0, 0, 0.5)", // Black with 50% opacity
           }}
         />
@@ -104,10 +104,154 @@ export default function Home() {
           </Typography>
         </Box>
       </Box>
-      <Box display="flex" justifyContent={"center"}>
-        {/* <Typography sx={{ padding: 5, fontSize: "2rem" }}>
-          Your Trusted Partner in Finding your Dream Home
-        </Typography> */}
+      <Box
+        display="flex"
+        justifyContent={"center"}
+        alignItems={"center"}
+        flexDirection="column"
+      >
+        <Typography
+          sx={{
+            textAlign: "center",
+            padding: 5,
+            fontSize: isMobile ? "1.5rem" : "2rem",
+          }}
+        >
+          {t("Your Trusted Partner in Finding your Dream Home")}
+        </Typography>
+        {!isMobile && (
+          <Box backgroundColor="" width="75vw" height="75vh">
+            <Stack
+              width="100%"
+              height="100%"
+              flexDirection="row"
+              display="flex"
+              justifyContent="space-between"
+            >
+              <Stack
+                flexDirection={"column"}
+                // marginTop={25}
+                width="75%"
+                paddingRight={2.5}
+                display="flex"
+                justifyContent={"center"}
+                alignItems={"center"}
+              >
+                <Stack
+                  width="75%"
+                  height="100%"
+                  display="flex"
+                  justifyContent="center"
+                  gap={5}
+                  // backgroundColor="green"
+                >
+                  <Typography
+                    sx={{
+                      textAlign: "center",
+                      fontWeight: "100",
+                    }}
+                  >
+                    Expert knowledge of NYC neighborhoods
+                  </Typography>
+                  <Typography sx={{ textAlign: "center", fontWeight: "100" }}>
+                    Personalized service for both local and international
+                    clients
+                  </Typography>
+                  <Typography sx={{ textAlign: "center", fontWeight: "100" }}>
+                    Specializing in luxury properties and investment
+                    opportunities
+                  </Typography>
+                  <Typography sx={{ textAlign: "center", fontWeight: "100" }}>
+                    With years of experience in the New York City real estate
+                    market, I specialize in helping clients find their perfect
+                    property, whether it's for investment or a place to call
+                    home.
+                  </Typography>
+                </Stack>
+              </Stack>
+              <Box
+                width="50%"
+                //   height="100%"
+                sx={{
+                  backgroundImage: "url(/richard.png)",
+                  backgroundPosition: "center",
+                  backgroundSize: "100%",
+                  backgroundRepeat: "no-repeat", // Prevent the image from repeating
+                }}
+              ></Box>
+            </Stack>
+          </Box>
+        )}
+        {isMobile && (
+          <Box backgroundColor="" width="90vw" height="100%">
+            <Box
+              // backgroundColor="green"
+              height="400px"
+              sx={{
+                backgroundImage: "url(/richard.png)",
+                backgroundPosition: "center",
+                backgroundSize: "100%",
+                backgroundRepeat: "no-repeat", // Prevent the image from repeating
+              }}
+            ></Box>
+            <Stack
+              flexDirection={"column"}
+              width="100%"
+              display="flex"
+              justifyContent={"center"}
+              alignItems={"center"}
+            >
+              <Stack
+                width="100%"
+                height="100%"
+                display="flex"
+                justifyContent="center"
+                paddingY={2.5}
+                gap={5}
+                // backgroundColor="green"
+              >
+                <Typography
+                  sx={{
+                    textAlign: "center",
+                    fontWeight: "100",
+                    fontSize: "0.8rem",
+                  }}
+                >
+                  Expert knowledge of NYC neighborhoods
+                </Typography>
+                <Typography
+                  sx={{
+                    textAlign: "center",
+                    fontWeight: "100",
+                    fontSize: "0.8rem",
+                  }}
+                >
+                  Personalized service for both local and international clients
+                </Typography>
+                <Typography
+                  sx={{
+                    textAlign: "center",
+                    fontWeight: "100",
+                    fontSize: "0.8rem",
+                  }}
+                >
+                  Specializing in luxury properties and investment opportunities
+                </Typography>
+                <Typography
+                  sx={{
+                    textAlign: "center",
+                    fontWeight: "100",
+                    fontSize: "0.8rem",
+                  }}
+                >
+                  With years of experience in the New York City real estate
+                  market, I specialize in helping clients find their perfect
+                  property, whether it's for investment or a place to call home.
+                </Typography>
+              </Stack>
+            </Stack>
+          </Box>
+        )}
       </Box>
       <Footer />
     </>
