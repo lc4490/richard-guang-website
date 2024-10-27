@@ -116,11 +116,13 @@ const Header = ({
             {t("Neighborhood Guide")}
           </Button>
           <Button
+            href="/contact"
             disableRipple
             sx={{
               color: textColor,
               fontWeight: "100",
-              fontSize: "0.85rem",
+              textDecoration: page == "contact" ? "underline" : "none",
+              textUnderlineOffset: "4px",
               "&:hover": {
                 textDecoration: "underline",
                 textUnderlineOffset: "4px",
@@ -296,10 +298,13 @@ const Header = ({
                 {t("Neighborhood Guide")}
               </Button>
               <Button
+                href="/contact"
                 disableRipple
                 sx={{
                   color: "black",
                   fontWeight: "100",
+                  textDecoration: page == "contact" ? "underline" : "none",
+                  textUnderlineOffset: "4px",
                   "&:hover": {
                     textDecoration: "underline",
                     textUnderlineOffset: "4px",

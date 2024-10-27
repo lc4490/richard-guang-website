@@ -339,7 +339,11 @@ export default function Home() {
         </Box>
         <Box display="flex" justifyContent="center" padding={5}>
           <Typography
-            sx={{ fontSize: isMobile ? "1.4rem" : "4.5rem", fontFamily: "" }}
+            sx={{
+              textAlign: "center",
+              fontSize: isMobile ? "1.8rem" : "4.5rem",
+              fontFamily: "",
+            }}
           >
             {t("NEIGHBORHOOD GUIDE")}
           </Typography>
