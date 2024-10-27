@@ -151,21 +151,22 @@ export default function Home() {
                       fontWeight: "100",
                     }}
                   >
-                    Expert knowledge of NYC neighborhoods
+                    {t("Expert knowledge of NYC neighborhoods")}
                   </Typography>
                   <Typography sx={{ textAlign: "center", fontWeight: "100" }}>
-                    Personalized service for both local and international
-                    clients
+                    {t(
+                      "Personalized service for both local and international clients"
+                    )}
                   </Typography>
                   <Typography sx={{ textAlign: "center", fontWeight: "100" }}>
-                    Specializing in luxury properties and investment
-                    opportunities
+                    {t(
+                      "Specializing in luxury properties and investment opportunities"
+                    )}
                   </Typography>
                   <Typography sx={{ textAlign: "center", fontWeight: "100" }}>
-                    With years of experience in the New York City real estate
-                    market, I specialize in helping clients find their perfect
-                    property, whether it's for investment or a place to call
-                    home.
+                    {t(
+                      "With years of experience in the New York City real estate market, I specialize in helping clients find their perfect property, whether it's for investment or a place to call home."
+                    )}
                   </Typography>
                 </Stack>
               </Stack>
@@ -214,39 +215,24 @@ export default function Home() {
                   sx={{
                     textAlign: "center",
                     fontWeight: "100",
-                    fontSize: "0.8rem",
                   }}
                 >
-                  Expert knowledge of NYC neighborhoods
+                  {t("Expert knowledge of NYC neighborhoods")}
                 </Typography>
-                <Typography
-                  sx={{
-                    textAlign: "center",
-                    fontWeight: "100",
-                    fontSize: "0.8rem",
-                  }}
-                >
-                  Personalized service for both local and international clients
+                <Typography sx={{ textAlign: "center", fontWeight: "100" }}>
+                  {t(
+                    "Personalized service for both local and international clients"
+                  )}
                 </Typography>
-                <Typography
-                  sx={{
-                    textAlign: "center",
-                    fontWeight: "100",
-                    fontSize: "0.8rem",
-                  }}
-                >
-                  Specializing in luxury properties and investment opportunities
+                <Typography sx={{ textAlign: "center", fontWeight: "100" }}>
+                  {t(
+                    "Specializing in luxury properties and investment opportunities"
+                  )}
                 </Typography>
-                <Typography
-                  sx={{
-                    textAlign: "center",
-                    fontWeight: "100",
-                    fontSize: "0.8rem",
-                  }}
-                >
-                  With years of experience in the New York City real estate
-                  market, I specialize in helping clients find their perfect
-                  property, whether it's for investment or a place to call home.
+                <Typography sx={{ textAlign: "center", fontWeight: "100" }}>
+                  {t(
+                    "With years of experience in the New York City real estate market, I specialize in helping clients find their perfect property, whether it's for investment or a place to call home."
+                  )}
                 </Typography>
               </Stack>
             </Stack>

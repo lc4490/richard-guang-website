@@ -45,28 +45,40 @@ export default function Home() {
   };
   const cards = [
     {
-      title: "Why Invest in NYC Real Estate?",
-      text: "New York City offers a unique opportunity for real estate investment, combining stability, high appreciation potential, and proximity to some of the world's best universities. For parents, owning a property here not only provides a safe and convenient home for your child but also represents a smart financial investment. The NYC market is known for its resilience and long-term value, making it an ideal choice for international buyers.",
+      title: t("Why Invest in NYC Real Estate?"),
+      text: t(
+        "New York City offers a unique opportunity for real estate investment, combining stability, high appreciation potential, and proximity to some of the world's best universities. For parents, owning a property here not only provides a safe and convenient home for your child but also represents a smart financial investment. The NYC market is known for its resilience and long-term value, making it an ideal choice for international buyers."
+      ),
     },
     {
-      title: "Understanding the NYC Real Estate Market",
-      text: "The NYC real estate market is vast and varied, with neighborhoods offering different lifestyles and investment potentials. Whether you're looking for a quiet residential area near Columbia University or a vibrant, bustling location close to NYU, I can guide you through the options. Typical property types range from modern condos in high-rise buildings to classic brownstones in historic districts. I will help you navigate this complex market to find the perfect home that meets both your child's needs and your investment goals.",
+      title: t("Understanding the NYC Real Estate Market"),
+      text: t(
+        "The NYC real estate market is vast and varied, with neighborhoods offering different lifestyles and investment potentials. Whether you're looking for a quiet residential area near Columbia University or a vibrant, bustling location close to NYU, I can guide you through the options. Typical property types range from modern condos in high-rise buildings to classic brownstones in historic districts. I will help you navigate this complex market to find the perfect home that meets both your child's needs and your investment goals."
+      ),
     },
     {
-      title: "Personalized Guidance Through the Buying Process",
-      text: "When you visit New York City, I will arrange a series of property tours over 2-5 days, carefully planned around your schedule. During these tours, I will provide detailed insights into each property, highlighting both the benefits and any potential drawbacks. My priority is to ensure you have all the information you need to make an informed decision.",
+      title: t("Personalized Guidance Through the Buying Process"),
+      text: t(
+        "When you visit New York City, I will arrange a series of property tours over 2-5 days, carefully planned around your schedule. During these tours, I will provide detailed insights into each property, highlighting both the benefits and any potential drawbacks. My priority is to ensure you have all the information you need to make an informed decision."
+      ),
     },
     {
-      title: "Financial Analysis and Investment Potential",
-      text: "Investing in real estate is not just about finding a home; it's about securing a valuable asset for the future. I will conduct a thorough financial analysis of each property you are interested in, assessing factors such as potential rental income, appreciation forecasts, and overall return on investment (ROI). This analysis will help you understand which properties offer the best financial benefits.",
+      title: t("Financial Analysis and Investment Potential"),
+      text: t(
+        "Investing in real estate is not just about finding a home; it's about securing a valuable asset for the future. I will conduct a thorough financial analysis of each property you are interested in, assessing factors such as potential rental income, appreciation forecasts, and overall return on investment (ROI). This analysis will help you understand which properties offer the best financial benefits."
+      ),
     },
     {
-      title: "Offer Submission and Negotiation",
-      text: "Once you've chosen the ideal property, I will guide you in making a competitive offer. My extensive knowledge of the NYC market allows me to advise you on what price to offer based on current market conditions and the property's true value. My goal is to help you secure the property at the best possible price.",
+      title: t("Offer Submission and Negotiation"),
+      text: t(
+        "Once you've chosen the ideal property, I will guide you in making a competitive offer. My extensive knowledge of the NYC market allows me to advise you on what price to offer based on current market conditions and the property's true value. My goal is to help you secure the property at the best possible price."
+      ),
     },
     {
-      title: "Seamless Closing Process",
-      text: "Closing on a property in NYC involves multiple steps, from finalizing contracts to ensuring all legal and financial obligations are met. I will coordinate closely with your legal and financial advisors to handle every detail. If you need to return to China before the transaction is complete, don't worry. I have experience managing remote closings and will ensure everything is taken care of on your behalf. Whether it's signing documents or coordinating with local authorities, I will act as your trusted representative in New York.",
+      title: t("Seamless Closing Process"),
+      text: t(
+        "Closing on a property in NYC involves multiple steps, from finalizing contracts to ensuring all legal and financial obligations are met. I will coordinate closely with your legal and financial advisors to handle every detail. If you need to return to China before the transaction is complete, don't worry. I have experience managing remote closings and will ensure everything is taken care of on your behalf. Whether it's signing documents or coordinating with local authorities, I will act as your trusted representative in New York."
+      ),
     },
   ];
   return (
@@ -109,7 +121,7 @@ export default function Home() {
               fontFamily: "",
             }}
           >
-            {t("FOREIGN INVESTOR GUIDE")}
+            {t("Foreign Investor Guide")}
           </Typography>
         </Box>
         <Box width={"100%"} paddingX={isMobile ? 5 : 30}>
@@ -120,9 +132,9 @@ export default function Home() {
               fontSize: isMobile ? "0.75rem" : "1rem",
             }}
           >
-            {
+            {t(
               "Welcome to Richard's real estate guide for foreign investors! As a seasoned NYC real estate broker, I've had the privilege of assisting many Chinese families in securing the perfect home for their children studying in the United States. With experience helping parents whose children attend prestigious universities like NYU, Columbia, Princeton, Harvard, and MIT, I understand the unique needs and concerns you may have as you embark on this important journey."
-            }
+            )}
           </Typography>
         </Box>
 

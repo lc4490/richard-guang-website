@@ -347,7 +347,7 @@ const Header = ({
                     MenuProps={{
                       PaperProps: {
                         sx: {
-                          backgroundColor: textColor, // Change dropdown background color
+                          backgroundColor: "#333", // Change dropdown background color
                           color: "white", // Change text color of menu items
                           "& .MuiMenuItem-root": {
                             "&:hover": {

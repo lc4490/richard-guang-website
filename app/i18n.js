@@ -8,9 +8,9 @@ const resources = {
       "RICHARD GUANG": "RICHARD GUANG",
       About: "About",
       Listing: "Listings",
-      "Foreign Investor Guide": "Foreign Investor Guide",
+      "Foreign Investor Guide": "FOREIGN INVESTOR GUIDE",
       "Neighborhood Guide": "Neighborhood Guide",
-      Contact: "Contact",
+      Contact: "CONTACT",
       "REAL ESTATE": "REAL ESTATE",
       ABOUT: "ABOUT",
       "Richard Guang is a graduate of the MIT Sloan School of Management where he studied Finance and Statistics. He has a fierce work ethic, tenacious drive to succeed, and an ability to establish rapport with all people. Born and raised in New York City, Richard's expertise and vast knowledge of the city ensures the highest caliber of service to his clients, whether it be buying, selling, investing, or renting a property.":
@@ -123,6 +123,43 @@ const resources = {
       Culture: "Culture",
       Lifestyle: "Lifestyle",
       Transportation: "Transportation",
+      "Your Trusted Partner in Finding your Dream Home":
+        "Your Trusted Partner in Finding your Dream Home",
+      "Expert knowledge of NYC neighborhoods":
+        "Expert knowledge of NYC neighborhoods",
+      "Personalized service for both local and international clients":
+        "Personalized service for both local and international clients",
+      "Specializing in luxury properties and investment opportunities":
+        "Specializing in luxury properties and investment opportunities",
+      "With years of experience in the New York City real estate market, I specialize in helping clients find their perfect property, whether it's for investment or a place to call home.":
+        "With years of experience in the New York City real estate market, I specialize in helping clients find their perfect property, whether it's for investment or a place to call home.",
+      "Welcome to Richard's real estate guide for foreign investors! As a seasoned NYC real estate broker, I've had the privilege of assisting many Chinese families in securing the perfect home for their children studying in the United States. With experience helping parents whose children attend prestigious universities like NYU, Columbia, Princeton, Harvard, and MIT, I understand the unique needs and concerns you may have as you embark on this important journey.":
+        "Welcome to Richard's real estate guide for foreign investors! As a seasoned NYC real estate broker, I've had the privilege of assisting many Chinese families in securing the perfect home for their children studying in the United States. With experience helping parents whose children attend prestigious universities like NYU, Columbia, Princeton, Harvard, and MIT, I understand the unique needs and concerns you may have as you embark on this important journey.",
+      "Why Invest in NYC Real Estate?": "Why Invest in NYC Real Estate?",
+      "New York City offers a unique opportunity for real estate investment, combining stability, high appreciation potential, and proximity to some of the world's best universities. For parents, owning a property here not only provides a safe and convenient home for your child but also represents a smart financial investment. The NYC market is known for its resilience and long-term value, making it an ideal choice for international buyers.":
+        "New York City offers a unique opportunity for real estate investment, combining stability, high appreciation potential, and proximity to some of the world's best universities. For parents, owning a property here not only provides a safe and convenient home for your child but also represents a smart financial investment. The NYC market is known for its resilience and long-term value, making it an ideal choice for international buyers.",
+      "Understanding the NYC Real Estate Market":
+        "Understanding the NYC Real Estate Market",
+      "The NYC real estate market is vast and varied, with neighborhoods offering different lifestyles and investment potentials. Whether you're looking for a quiet residential area near Columbia University or a vibrant, bustling location close to NYU, I can guide you through the options. Typical property types range from modern condos in high-rise buildings to classic brownstones in historic districts. I will help you navigate this complex market to find the perfect home that meets both your child's needs and your investment goals.":
+        "The NYC real estate market is vast and varied, with neighborhoods offering different lifestyles and investment potentials. Whether you're looking for a quiet residential area near Columbia University or a vibrant, bustling location close to NYU, I can guide you through the options. Typical property types range from modern condos in high-rise buildings to classic brownstones in historic districts. I will help you navigate this complex market to find the perfect home that meets both your child's needs and your investment goals.",
+      "Personalized Guidance Through the Buying Process":
+        "Personalized Guidance Through the Buying Process",
+      "When you visit New York City, I will arrange a series of property tours over 2-5 days, carefully planned around your schedule. During these tours, I will provide detailed insights into each property, highlighting both the benefits and any potential drawbacks. My priority is to ensure you have all the information you need to make an informed decision.":
+        "When you visit New York City, I will arrange a series of property tours over 2-5 days, carefully planned around your schedule. During these tours, I will provide detailed insights into each property, highlighting both the benefits and any potential drawbacks. My priority is to ensure you have all the information you need to make an informed decision.",
+      "Financial Analysis and Investment Potential":
+        "Financial Analysis and Investment Potential",
+      "Investing in real estate is not just about finding a home; it's about securing a valuable asset for the future. I will conduct a thorough financial analysis of each property you are interested in, assessing factors such as potential rental income, appreciation forecasts, and overall return on investment (ROI). This analysis will help you understand which properties offer the best financial benefits.":
+        "Investing in real estate is not just about finding a home; it's about securing a valuable asset for the future. I will conduct a thorough financial analysis of each property you are interested in, assessing factors such as potential rental income, appreciation forecasts, and overall return on investment (ROI). This analysis will help you understand which properties offer the best financial benefits.",
+      "Offer Submission and Negotiation": "Offer Submission and Negotiation",
+      "Once you've chosen the ideal property, I will guide you in making a competitive offer. My extensive knowledge of the NYC market allows me to advise you on what price to offer based on current market conditions and the property's true value. My goal is to help you secure the property at the best possible price.":
+        "Once you've chosen the ideal property, I will guide you in making a competitive offer. My extensive knowledge of the NYC market allows me to advise you on what price to offer based on current market conditions and the property's true value. My goal is to help you secure the property at the best possible price.",
+      "Seamless Closing Process": "Seamless Closing Process",
+      "Closing on a property in NYC involves multiple steps, from finalizing contracts to ensuring all legal and financial obligations are met. I will coordinate closely with your legal and financial advisors to handle every detail. If you need to return to China before the transaction is complete, don't worry. I have experience managing remote closings and will ensure everything is taken care of on your behalf. Whether it's signing documents or coordinating with local authorities, I will act as your trusted representative in New York.":
+        "Closing on a property in NYC involves multiple steps, from finalizing contracts to ensuring all legal and financial obligations are met. I will coordinate closely with your legal and financial advisors to handle every detail. If you need to return to China before the transaction is complete, don't worry. I have experience managing remote closings and will ensure everything is taken care of on your behalf. Whether it's signing documents or coordinating with local authorities, I will act as your trusted representative in New York.",
+      Name: "Name",
+      Email: "Email",
+      Message: "Message",
+      Send: "Send",
     },
   },
   cn: {
@@ -132,7 +169,7 @@ const resources = {
       Listing: "房源列表",
       "Foreign Investor Guide": "外国投资者指南",
       "Neighborhood Guide": "社区指南",
-      Contact: "联系我们",
+      Contact: "联系我",
       "REAL ESTATE": "地产",
       ABOUT: "关于",
       "Richard Guang is a graduate of the MIT Sloan School of Management where he studied Finance and Statistics. He has a fierce work ethic, tenacious drive to succeed, and an ability to establish rapport with all people. Born and raised in New York City, Richard's expertise and vast knowledge of the city ensures the highest caliber of service to his clients, whether it be buying, selling, investing, or renting a property.":
@@ -245,6 +282,40 @@ const resources = {
       Culture: "文化",
       Lifestyle: "生活方式",
       Transportation: "交通",
+      "Your Trusted Partner in Finding your Dream Home":
+        "您的可信赖伙伴，助您找到梦想之家",
+      "Expert knowledge of NYC neighborhoods": "精通纽约市各个社区的专业知识",
+      "Personalized service for both local and international clients":
+        "为本地和国际客户提供个性化服务",
+      "Specializing in luxury properties and investment opportunities":
+        "专注于豪华房产和投资机会",
+      "With years of experience in the New York City real estate market, I specialize in helping clients find their perfect property, whether it's for investment or a place to call home.":
+        "凭借多年纽约市房地产市场的经验，我专注于帮助客户找到他们理想的房产，无论是投资还是作为家园",
+      "Welcome to Richard's real estate guide for foreign investors! As a seasoned NYC real estate broker, I've had the privilege of assisting many Chinese families in securing the perfect home for their children studying in the United States. With experience helping parents whose children attend prestigious universities like NYU, Columbia, Princeton, Harvard, and MIT, I understand the unique needs and concerns you may have as you embark on this important journey.":
+        "欢迎来到管赐盛的外国投资者房地产指南！作为一位经验丰富的纽约市房地产经纪人，我很荣幸帮助过许多中国家庭为他们在美国留学的子女找到理想的家园。我有丰富的经验，曾帮助孩子就读于纽约大学、哥伦比亚大学、普林斯顿大学、哈佛大学和麻省理工学院等顶尖学府的父母。我理解您在这段重要旅程中可能面临的独特需求和顾虑。",
+      "Why Invest in NYC Real Estate?": "为什么投资纽约市房地产？",
+      "New York City offers a unique opportunity for real estate investment, combining stability, high appreciation potential, and proximity to some of the world's best universities. For parents, owning a property here not only provides a safe and convenient home for your child but also represents a smart financial investment. The NYC market is known for its resilience and long-term value, making it an ideal choice for international buyers.":
+        "纽约市提供了独特的房地产投资机会，兼具稳定性、高增值潜力以及毗邻世界顶尖大学的优势。对于家长来说，在这里拥有一处房产不仅为您的孩子提供了安全、便利的住所，同时也是一项明智的财务投资。纽约市的房地产市场以其韧性和长期价值著称，是国际买家的理想选择。",
+      "Understanding the NYC Real Estate Market": "了解纽约市房地产市场",
+      "The NYC real estate market is vast and varied, with neighborhoods offering different lifestyles and investment potentials. Whether you're looking for a quiet residential area near Columbia University or a vibrant, bustling location close to NYU, I can guide you through the options. Typical property types range from modern condos in high-rise buildings to classic brownstones in historic districts. I will help you navigate this complex market to find the perfect home that meets both your child's needs and your investment goals.":
+        "纽约市房地产市场广阔而多样，不同的社区提供不同的生活方式和投资潜力。无论您是寻找哥伦比亚大学附近安静的住宅区，还是纽约大学周边充满活力的繁华地段，我都可以为您提供指导。典型的房产类型从高层建筑中的现代公寓到历史街区中的经典棕石建筑应有尽有。我将帮助您驾驭这个复杂的市场，找到既能满足您孩子需求又符合您投资目标的理想之家。",
+      "Personalized Guidance Through the Buying Process":
+        "购房过程中的个性化指导",
+      "When you visit New York City, I will arrange a series of property tours over 2-5 days, carefully planned around your schedule. During these tours, I will provide detailed insights into each property, highlighting both the benefits and any potential drawbacks. My priority is to ensure you have all the information you need to make an informed decision.":
+        "当您来到纽约市时，我将根据您的时间安排为期2到5天的房产参观行程。在这些参观过程中，我会为您详细介绍每一处房产，强调其优势和可能存在的潜在缺点。我的首要任务是确保您拥有所有必要的信息，以便做出明智的决策。",
+      "Financial Analysis and Investment Potential": "财务分析与投资潜力",
+      "Investing in real estate is not just about finding a home; it's about securing a valuable asset for the future. I will conduct a thorough financial analysis of each property you are interested in, assessing factors such as potential rental income, appreciation forecasts, and overall return on investment (ROI). This analysis will help you understand which properties offer the best financial benefits.":
+        "投资房地产不仅仅是找到一个住所；更是为未来获取一项有价值的资产。我将对您感兴趣的每一处房产进行全面的财务分析，评估诸如潜在租金收入、升值预期以及整体投资回报率（ROI）等因素。通过这项分析，您将更清楚地了解哪些房产能够带来最佳的财务收益。",
+      "Offer Submission and Negotiation": "提交报价与谈判",
+      "Once you've chosen the ideal property, I will guide you in making a competitive offer. My extensive knowledge of the NYC market allows me to advise you on what price to offer based on current market conditions and the property's true value. My goal is to help you secure the property at the best possible price.":
+        "一旦您选定了理想的房产，我将指导您提交具有竞争力的报价。凭借我对纽约市市场的深刻了解，我会根据当前的市场状况和房产的真实价值，为您提供合理的出价建议。我的目标是帮助您以最优的价格成功购得房产。",
+      "Seamless Closing Process": "无缝的成交过程",
+      "Closing on a property in NYC involves multiple steps, from finalizing contracts to ensuring all legal and financial obligations are met. I will coordinate closely with your legal and financial advisors to handle every detail. If you need to return to China before the transaction is complete, don't worry. I have experience managing remote closings and will ensure everything is taken care of on your behalf. Whether it's signing documents or coordinating with local authorities, I will act as your trusted representative in New York.":
+        "在纽约市购房的成交过程涉及多个步骤，从签订合同到确保所有法律和财务义务得到履行。我将与您的法律和财务顾问紧密合作，处理每一个细节。如果您在交易完成前需要返回中国，不必担心。我有管理远程成交的经验，会确保所有事务在您的授权下顺利进行。无论是签署文件还是与当地政府协调，我都会作为您在纽约的可信赖代表，处理好一切事务。",
+      Name: "姓名",
+      Email: "邮件",
+      Message: "讯息",
+      Send: "发送",
     },
   },
 };

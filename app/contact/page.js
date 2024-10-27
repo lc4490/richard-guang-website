@@ -104,25 +104,28 @@ export default function Home() {
           flexDirection="column"
         >
           <Typography
-            sx={{ fontSize: isMobile ? "2.5rem" : "4.5rem", fontFamily: "" }}
+            sx={{
+              fontSize: isMobile ? "2.5rem" : "4.5rem",
+              fontFamily: "",
+            }}
           >
-            {t("CONTACT")}
+            {t("Contact")}
           </Typography>
         </Box>
         <Box component="div" sx={{ maxWidth: 400, mx: "auto", paddingX: 5 }}>
           <form onSubmit={onSubmit}>
             <Typography variant="h6" gutterBottom>
-              Name
+              {t("Name")}
             </Typography>
             <TextField fullWidth type="text" name="name" required />
 
             <Typography variant="h6" gutterBottom sx={{ mt: 2 }}>
-              Email
+              {t("Email")}
             </Typography>
             <TextField fullWidth type="email" name="email" required />
 
             <Typography variant="h6" gutterBottom sx={{ mt: 2 }}>
-              Message
+              {t("Message")}
             </Typography>
             <TextField fullWidth multiline rows={4} name="message" required />
 
@@ -133,7 +136,7 @@ export default function Home() {
               fullWidth
               sx={{ mt: 3 }}
             >
-              Send
+              {t("Send")}
             </Button>
           </form>
           {result && (
