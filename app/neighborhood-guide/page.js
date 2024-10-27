@@ -13,6 +13,8 @@ import {
   Drawer,
   Grid,
   Modal,
+  Tabs,
+  Tab,
 } from "@mui/material";
 
 import Image from "next/image";
@@ -24,6 +26,7 @@ import { useState } from "react";
 
 import { useTranslation } from "react-i18next";
 import i18n from "../i18n"; // Adjust the path as necessary
+import { ArrowBackIosNew, ArrowForwardIos } from "@mui/icons-material";
 
 import Header from "../Header";
 import Footer from "../Footer";
@@ -228,6 +231,11 @@ export default function Home() {
     setSelectedLocation(index);
     setOpenDesModal(true);
   };
+  const [tabIndex, setTabIndex] = useState(0);
+  const [scrollable, setScrollable] = useState(false);
+  const handleTabChange = (event, newIndex) => {
+    setTabIndex(newIndex);
+  };
   return (
     <>
       <Box
@@ -246,83 +254,171 @@ export default function Home() {
         {/* description modal */}
         <Modal open={openDesModal} onClose={() => setOpenDesModal(false)}>
           <Box
-            overflow="auto"
             sx={{
               position: "absolute",
               top: "50%",
               left: "50%",
               transform: "translate(-50%, -50%)",
-              width: "100%",
-              height: "100%",
+              width: "90%", // Flexible width for mobile
+              maxWidth: "900px",
+              height: "600px", // Fixed height to prevent fluctuations
               bgcolor: "background.default",
-              //   border: "2px solid #000",
               boxShadow: 24,
-              p: 4,
+              p: { xs: 2, md: 4 },
+              borderRadius: 3,
               display: "flex",
               flexDirection: "column",
+              overflow: "hidden", // Prevent box from expanding with content
             }}
           >
+            {/* Close Button */}
             <Box
               width="100%"
               display="flex"
               justifyContent="end"
               onClick={() => setOpenDesModal(false)}
             >
-              <CloseIcon sx={{ fontSize: "1.5rem" }} />
-            </Box>{" "}
+              <CloseIcon
+                sx={{
+                  fontSize: "1.5rem",
+                  cursor: "pointer",
+                  "&:hover": { color: "primary.main" },
+                }}
+              />
+            </Box>
+
+            {/* Fixed Image Container */}
             <Box
-              width="100%"
-              display="flex"
-              justifyContent={"center"}
-              paddingY={5}
+              sx={{
+                width: "100%",
+                height: "250px", // Fix the height for consistency
+                position: "relative",
+                backgroundImage: `url(${locations[selectedLocation]?.image})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                borderRadius: 2,
+                mb: 3, // Margin bottom for spacing
+              }}
             >
+              {/* Title over the Image */}
               <Typography
                 sx={{
-                  color: "black",
-                  // fontWeight: "500",
-                  fontFamily: "helvetica",
-                  fontSize: isMobile ? "2rem" : "4rem",
+                  position: "absolute",
+                  bottom: 0,
+                  left: 0,
+                  right: 0,
+                  color: "white",
+                  fontSize: { xs: "1.5rem", md: "3rem" }, // Adjust font size for mobile
+                  fontWeight: "bold",
+                  p: 2,
+                  background: "rgba(0, 0, 0, 0.4)", // Dark overlay to make text readable
+                  textAlign: "center",
                   textTransform: "uppercase",
                 }}
               >
-                {locations[selectedLocation].name}
+                {locations[selectedLocation]?.name}
               </Typography>
             </Box>
-            <Image
-              src={locations[selectedLocation].image}
-              alt="banner"
-              width={400} // These should be the actual dimensions of the image
-              height={400} // Aspect ratio based on these dimensions
-              style={{ width: "100%", height: "auto", objectFit: "contain" }} // This retains the aspect ratio
-            />
-            <Typography sx={{ mt: 5, fontWeight: "100" }}>
-              <strong style={{ textTransform: "uppercase" }}>
-                {t("Overview")}:
-              </strong>
-              <br />
-              {locations[selectedLocation].overview}
-            </Typography>
-            <Typography sx={{ mt: 2, fontWeight: "100" }}>
-              <strong style={{ textTransform: "uppercase" }}>
-                {t("Culture")}:
-              </strong>
-              <br />
-              {locations[selectedLocation].culture}
-            </Typography>
-            <Typography sx={{ mt: 2, fontWeight: "100" }}>
-              <strong style={{ textTransform: "uppercase" }}>
-                {t("Lifestyle")}:
-              </strong>
-              <br />
-              {locations[selectedLocation].lifestyle}
-            </Typography>
-            <Typography sx={{ mt: 2, fontWeight: "100" }}>
-              <strong style={{ textTransform: "uppercase" }}>
-                {t("Transportation")}:
-              </strong>
-              <br />
-              {locations[selectedLocation].transportation}
-            </Typography>
+
+            {/* Scrollable Tabs with Scroll Buttons */}
+            <Box
+              sx={{
+                position: "relative",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center", // Center the tabs section and arrows
+                mb: 2,
+              }}
+            >
+              {/* Left Scroll Button */}
+              <ArrowBackIosNew
+                sx={{
+                  cursor: "pointer",
+                  zIndex: 1,
+                  // backgroundColor: "white",
+                  borderRadius: "50%",
+                  // boxShadow: 3,
+                  mx: 1, // Margin to prevent overlap with the tabs
+                  fontSize: "0.9rem",
+                  display: { xs: "block", md: "none" }, // Ensure buttons are visible on mobile
+                }}
+                onClick={() => setTabIndex(tabIndex > 0 ? tabIndex - 1 : 0)} // Move to the previous tab
+              />
+
+              {/* Tabs */}
+              <Tabs
+                value={tabIndex}
+                onChange={handleTabChange}
+                variant="scrollable"
+                scrollButtons="auto"
+                indicatorColor="primary"
+                textColor="primary"
+                sx={{
+                  fontSize: { xs: "0.8rem", md: "1rem" }, // Adjust font size for mobile
+                  minHeight: { xs: "40px", md: "48px" }, // Adjust tab height for mobile
+                  mx: 2, // Add margin to reduce width and avoid overlap with arrows
+                  width: { xs: "80%", md: "85%" }, // Reduce width for better spacing with arrows
+                }}
+              >
+                <Tab label="Overview" sx={{ minWidth: "25%" }} />
+                <Tab label="Culture" sx={{ minWidth: "25%" }} />
+                <Tab label="Lifestyle" sx={{ minWidth: "25%" }} />
+                <Tab label="Transportation" sx={{ minWidth: "25%" }} />
+              </Tabs>
+
+              {/* Right Scroll Button */}
+              <ArrowForwardIos
+                sx={{
+                  cursor: "pointer",
+                  zIndex: 1,
+                  // backgroundColor: "white",
+                  borderRadius: "50%",
+                  // boxShadow: 3,
+                  mx: 1, // Margin to prevent overlap with the tabs
+                  fontSize: "0.9rem",
+                  display: { xs: "block", md: "none" }, // Ensure buttons are visible on mobile
+                }}
+                onClick={() => setTabIndex(tabIndex < 3 ? tabIndex + 1 : 3)} // Move to the next tab
+              />
+            </Box>
+
+            {/* Scrollable Content Area */}
+            <Box
+              sx={{
+                flex: 1, // Takes up remaining space in the modal
+                overflowY: "auto", // Enables vertical scrolling for overflowing content
+                padding: { xs: 2, md: 3 }, // Padding for content
+              }}
+            >
+              {tabIndex === 0 && (
+                <Typography sx={{ fontWeight: "300" }}>
+                  <strong>{t("Overview")}:</strong>
+                  <br />
+                  {locations[selectedLocation]?.overview}
+                </Typography>
+              )}
+              {tabIndex === 1 && (
+                <Typography sx={{ fontWeight: "300" }}>
+                  <strong>{t("Culture")}:</strong>
+                  <br />
+                  {locations[selectedLocation]?.culture}
+                </Typography>
+              )}
+              {tabIndex === 2 && (
+                <Typography sx={{ fontWeight: "300" }}>
+                  <strong>{t("Lifestyle")}:</strong>
+                  <br />
+                  {locations[selectedLocation]?.lifestyle}
+                </Typography>
+              )}
+              {tabIndex === 3 && (
+                <Typography sx={{ fontWeight: "300" }}>
+                  <strong>{t("Transportation")}:</strong>
+                  <br />
+                  {locations[selectedLocation]?.transportation}
+                </Typography>
+              )}
+            </Box>
           </Box>
         </Modal>
         <Box sx={{ paddingLeft: isMobile ? 2.5 : 5 }}>
