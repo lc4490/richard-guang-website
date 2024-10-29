@@ -82,10 +82,22 @@ export default function Home() {
                 width="50%"
                 paddingRight={2.5}
               >
-                <Typography sx={{ fontSize: "4.5rem", lineHeight: "1.25" }}>
+                <Typography
+                  sx={{
+                    fontSize: "4.5rem",
+                    lineHeight: "1.25",
+                    fontFamily: "proxima nova",
+                  }}
+                >
                   {t("ABOUT")}
                 </Typography>
-                <Typography sx={{ fontSize: "4.5rem", lineHeight: "1.25" }}>
+                <Typography
+                  sx={{
+                    fontSize: "4.5rem",
+                    lineHeight: "1.25",
+                    fontFamily: "proxima nova",
+                  }}
+                >
                   {t("RICHARD GUANG")}
                 </Typography>
 
@@ -122,10 +134,22 @@ export default function Home() {
           {isMobile && (
             <Stack flexDirection={"column"} marginTop={5}>
               <Box sx={{ paddingLeft: isMobile ? 2.5 : 0 }}>
-                <Typography sx={{ fontSize: "2.5rem", lineHeight: "1.25" }}>
+                <Typography
+                  sx={{
+                    fontSize: "2.5rem",
+                    lineHeight: "1.25",
+                    fontFamily: "proxima nova",
+                  }}
+                >
                   {t("ABOUT")}
                 </Typography>
-                <Typography sx={{ fontSize: "2.5rem", lineHeight: "1.25" }}>
+                <Typography
+                  sx={{
+                    fontSize: "2.5rem",
+                    lineHeight: "1.25",
+                    fontFamily: "proxima nova",
+                  }}
+                >
                   {t("RICHARD GUANG")}
                 </Typography>
               </Box>

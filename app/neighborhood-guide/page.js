@@ -438,7 +438,7 @@ export default function Home() {
             sx={{
               textAlign: "center",
               fontSize: isMobile ? "1.8rem" : "4.5rem",
-              fontFamily: "",
+              fontFamily: "proxima nova",
             }}
           >
             {t("NEIGHBORHOOD GUIDE")}

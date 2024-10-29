@@ -15,10 +15,15 @@ import {
   Modal,
   Paper,
   TextField,
-  Card,
-  CardContent,
-  Slide,
 } from "@mui/material";
+import {
+  FaTiktok,
+  FaInstagram,
+  FaLinkedin,
+  FaYoutube,
+  FaEnvelope,
+  FaPhone,
+} from "react-icons/fa";
 
 import Image from "next/image";
 
@@ -49,14 +54,13 @@ export default function Home() {
   };
 
   const [result, setResult] = useState("");
-  const [slideIn, setSlideIn] = useState(false);
 
   const onSubmit = async (event) => {
     event.preventDefault();
     setResult("Sending....");
     const formData = new FormData(event.target);
 
-    formData.append("access_key", "e65bad31-7665-4454-baac-82fb0d012ec3");
+    formData.append("access_key", "4db629e9-ab75-462e-a7fc-60c894da8d4c");
 
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
@@ -81,7 +85,11 @@ export default function Home() {
         sx={{
           width: "100%",
           height: "100%",
-          background: "linear-gradient(to right, #f8f9fa, #eceff1)",
+
+          //   backgroundImage: "url(/house1.png)",
+          backgroundPosition: "center", // Center the image in the Box
+          // backgroundSize: "50%",
+
           paddingY: 2,
         }}
       >
@@ -106,76 +114,238 @@ export default function Home() {
           <Typography
             sx={{
               fontSize: isMobile ? "2.5rem" : "4.5rem",
-              fontFamily: "Roboto, sans-serif",
-              color: "#37474f",
-              fontWeight: "bold",
-              mb: 2,
+              fontFamily: "proxima nova",
             }}
           >
             {t("Contact")}
           </Typography>
         </Box>
-        <Slide direction="up" in={!slideIn} mountOnEnter unmountOnExit>
-          <Card
-            sx={{
-              maxWidth: 500,
-              mx: "auto",
-              p: 4,
-              borderRadius: 3,
-              backgroundColor: "#ffffff",
-              boxShadow: "0px 4px 10px rgba(0,0,0,0.1)",
-            }}
-          >
-            <CardContent>
-              <form onSubmit={onSubmit}>
-                <Typography variant="h6" gutterBottom>
-                  {t("Name")}
-                </Typography>
-                <TextField fullWidth type="text" name="name" required />
-
-                <Typography variant="h6" gutterBottom sx={{ mt: 2 }}>
-                  {t("Email")}
-                </Typography>
-                <TextField fullWidth type="email" name="email" required />
-
-                <Typography variant="h6" gutterBottom sx={{ mt: 2 }}>
-                  {t("Message")}
-                </Typography>
-                <TextField
-                  fullWidth
-                  multiline
-                  rows={4}
-                  name="message"
-                  required
-                />
-
+        <Box
+          backgroundColor=""
+          display="flex"
+          paddingX={isMobile ? 2 : 10}
+          justifyContent={"space-between"}
+        >
+          <Box width={isMobile ? "40%" : "33%"} backgroundColor="">
+            <Typography
+              sx={{
+                textAlign: isMobile ? "center" : "left",
+                fontSize: isMobile ? "1.5rem" : "2rem",
+                fontWeight: "100",
+                fontFamily: "proxima nova",
+              }}
+            >
+              {t("Get In Touch")}
+            </Typography>
+            {/* phone */}
+            <Box
+              marginTop={2.5}
+              display="flex"
+              flexDirection={isMobile ? "column" : "row"}
+              alignItems={"center"}
+            >
+              <Typography sx={{ fontWeight: "200", fontSize: "0.9rem" }}>
+                {t("Give me a call at")}
+              </Typography>
+              <Box display="flex" justifyContent={"left"}>
+                <Button href="tel:+17184967914">
+                  <Box gap={1} display="flex" flexDirection="row">
+                    <Typography
+                      sx={{
+                        color: "primary",
+                        fontFamily: "helvetica",
+                        fontWeight: "100",
+                        fontSize: "0.8rem",
+                        textTransform: "lowercase",
+                      }}
+                    >
+                      +1 (718) 496 7914
+                    </Typography>
+                  </Box>
+                </Button>
+              </Box>
+            </Box>
+            {/* email */}
+            <Box
+              display="flex"
+              flexDirection={isMobile ? "column" : "row"}
+              alignItems={"center"}
+            >
+              <Typography sx={{ fontWeight: "200", fontSize: "0.9rem" }}>
+                {t("Send me an email at")}
+              </Typography>
+              <Button href="mailto:rguang@elliman.com?...">
+                <Box gap={1} display="flex" flexDirection="row">
+                  <Typography
+                    sx={{
+                      color: "primary",
+                      fontFamily: "helvetica",
+                      fontWeight: "100",
+                      fontSize: "0.8rem",
+                      textTransform: "lowercase",
+                    }}
+                  >
+                    rguang@elliman.com
+                  </Typography>
+                </Box>
+              </Button>
+            </Box>
+            <Stack flexDirection={isMobile ? "column" : "row"} marginTop={2.5}>
+              <Stack flexDirection="row">
                 <Button
-                  type="submit"
-                  variant="contained"
-                  color="primary"
-                  fullWidth
+                  href="https://www.instagram.com/richard.guang/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   sx={{
-                    mt: 3,
-                    background:
-                      "linear-gradient(135deg, #3f51b5 0%, #1a237e 100%)",
-                    color: "#ffffff",
+                    color: "black",
+                    borderRadius: "50%", // Keep it circular
+                    width: "60px", // Smaller size
+                    height: "60px", // Smaller size
+                    display: "flex", // Flexbox to center the icon
+                    alignItems: "center", // Center vertically
+                    justifyContent: "center", // Center horizontally
                     "&:hover": {
-                      backgroundColor: "#0277bd",
+                      backgroundColor: "black", // Change to your desired hover color
+                      color: "white",
                     },
-                    transition: "background-color 0.3s ease",
                   }}
                 >
-                  {t("Send")}
+                  <FaInstagram style={{ fontSize: "20px" }} />
                 </Button>
-              </form>
-              {result && (
-                <Typography variant="body1" color="success.main" sx={{ mt: 2 }}>
-                  {result}
-                </Typography>
-              )}
-            </CardContent>
-          </Card>
-        </Slide>
+                <Button
+                  href="https://www.tiktok.com/@rizzarddd"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  sx={{
+                    color: "black",
+                    borderRadius: "50%", // Keep it circular
+                    width: "60px", // Smaller size
+                    height: "60px", // Smaller size
+                    display: "flex", // Flexbox to center the icon
+                    alignItems: "center", // Center vertically
+                    justifyContent: "center", // Center horizontally
+                    "&:hover": {
+                      backgroundColor: "black", // Change to your desired hover color
+                      color: "white",
+                    },
+                  }}
+                >
+                  <FaTiktok style={{ fontSize: "20px" }} />
+                </Button>
+              </Stack>
+              <Stack flexDirection={"row"}>
+                <Button
+                  href="https://www.linkedin.com/in/richard-guang/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  sx={{
+                    color: "black",
+                    borderRadius: "50%", // Keep it circular
+                    width: "60px", // Smaller size
+                    height: "60px", // Smaller size
+                    display: "flex", // Flexbox to center the icon
+                    alignItems: "center", // Center vertically
+                    justifyContent: "center", // Center horizontally
+                    "&:hover": {
+                      backgroundColor: "black", // Change to your desired hover color
+                      color: "white",
+                    },
+                  }}
+                >
+                  <FaLinkedin style={{ fontSize: "20px" }} />
+                </Button>
+                <Button
+                  href="https://www.youtube.com/@richardguang"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  sx={{
+                    color: "black",
+                    borderRadius: "50%", // Keep it circular
+                    width: "60px", // Smaller size
+                    height: "60px", // Smaller size
+                    display: "flex", // Flexbox to center the icon
+                    alignItems: "center", // Center vertically
+                    justifyContent: "center", // Center horizontally
+                    "&:hover": {
+                      backgroundColor: "black", // Change to your desired hover color
+                      color: "white",
+                    },
+                  }}
+                >
+                  <FaYoutube style={{ fontSize: "20px" }} />
+                </Button>
+              </Stack>
+            </Stack>
+          </Box>
+          <Box width={isMobile ? "50%" : "66%"} backgroundColor="">
+            <form onSubmit={onSubmit}>
+              <Typography
+                gutterBottom
+                sx={{
+                  fontWeight: "100",
+                  fontSize: isMobile ? "1rem" : "1.25rem",
+                }}
+              >
+                {t("Name")}
+              </Typography>
+              <TextField fullWidth type="text" name="name" required />
+
+              <Typography
+                gutterBottom
+                sx={{
+                  fontWeight: "100",
+                  fontSize: isMobile ? "1rem" : "1.25rem",
+                }}
+              >
+                {t("Email")}
+              </Typography>
+              <TextField fullWidth type="email" name="email" required />
+
+              <Typography
+                gutterBottom
+                sx={{
+                  fontWeight: "100",
+                  fontSize: isMobile ? "1rem" : "1.25rem",
+                }}
+              >
+                {t("Phone")}
+              </Typography>
+              <TextField fullWidth type="phone" name="phone" required />
+
+              <Typography
+                gutterBottom
+                sx={{
+                  fontWeight: "100",
+                  fontSize: isMobile ? "1rem" : "1.25rem",
+                }}
+              >
+                {t("Message")}
+              </Typography>
+              <TextField
+                fullWidth
+                multiline
+                rows={isMobile ? 1 : 3}
+                name="message"
+                required
+              />
+
+              <Button
+                type="submit"
+                variant="contained"
+                color="primary"
+                fullWidth
+                sx={{ mt: 3 }}
+              >
+                {t("Send")}
+              </Button>
+            </form>
+            {result && (
+              <Typography variant="body1" color="success.main" sx={{ mt: 2 }}>
+                {result}
+              </Typography>
+            )}
+          </Box>
+        </Box>
       </Box>
       <Footer />
     </>

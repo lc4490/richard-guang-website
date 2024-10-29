@@ -16,6 +16,7 @@ import {
   FaLinkedin,
   FaYoutube,
   FaEnvelope,
+  FaPhone,
 } from "react-icons/fa";
 
 import { useTranslation } from "react-i18next";
@@ -104,9 +105,20 @@ const Footer = ({}) => {
             </Button>
           </Stack>
           <Stack>
-            <Typography sx={{ fontFamily: "helvetica", fontWeight: "100" }}>
-              +1 (718) 496 7914
-            </Typography>
+            <Button href="tel:+17184967914">
+              <Box gap={1} display="flex" flexDirection="row">
+                <FaPhone style={{ fontSize: "20px", color: "black" }} />
+                <Typography
+                  sx={{
+                    color: "black",
+                    fontFamily: "helvetica",
+                    fontWeight: "100",
+                  }}
+                >
+                  +1 (718) 496 7914
+                </Typography>
+              </Box>
+            </Button>
             <Button href="mailto:rguang@elliman.com?...">
               <Box gap={1} display="flex" flexDirection="row">
                 <FaEnvelope style={{ fontSize: "20px", color: "black" }} />
@@ -140,9 +152,20 @@ const Footer = ({}) => {
             alignItems={"center"}
             gap={2}
           >
-            <Typography sx={{ fontFamily: "helvetica", fontWeight: "100" }}>
-              +1 (718) 496 7914
-            </Typography>
+            <Button href="tel:+17184967914">
+              <Box gap={1} display="flex" flexDirection="row">
+                <FaPhone style={{ fontSize: "20px", color: "black" }} />
+                <Typography
+                  sx={{
+                    color: "black",
+                    fontFamily: "helvetica",
+                    fontWeight: "100",
+                  }}
+                >
+                  +1 (718) 496 7914
+                </Typography>
+              </Box>
+            </Button>
             <Button href="mailto:rguang@elliman.com?...">
               <Box gap={1} display="flex" flexDirection="row">
                 <FaEnvelope style={{ fontSize: "20px", color: "black" }} />
