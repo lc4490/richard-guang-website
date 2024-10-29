@@ -66,7 +66,7 @@ const Header = ({
           <Button
             // href="https://www.elliman.com/newyorkcity/sales/ny-usa/price-high-sort/527-a-df24061116065265311-agentid"
             href="/listings"
-            target="_blank"
+            // target="_blank"
             disableRipple
             sx={{
               color: textColor,
@@ -252,8 +252,9 @@ const Header = ({
                 {t("About")}
               </Button>
               <Button
-                href="https://www.elliman.com/newyorkcity/sales/ny-usa/price-high-sort/527-a-df24061116065265311-agentid"
-                target="_blank"
+                // href="https://www.elliman.com/newyorkcity/sales/ny-usa/price-high-sort/527-a-df24061116065265311-agentid"
+                // target="_blank"
+                href="/listings"
                 disableRipple
                 sx={{
                   color: "black",
