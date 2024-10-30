@@ -206,9 +206,11 @@ export default function Home() {
                       variant="contained"
                       sx={{
                         borderRadius: "50px",
-                        backgroundColor: "black",
+                        backgroundColor: "white",
+                        color: "black",
                         "&:hover": {
-                          backgroundColor: "#1876D2",
+                          backgroundColor: "black",
+                          color: "white",
                         },
                       }}
                     >
@@ -220,9 +222,11 @@ export default function Home() {
                       variant="contained"
                       sx={{
                         borderRadius: "50px",
-                        backgroundColor: "black",
+                        backgroundColor: "white",
+                        color: "black",
                         "&:hover": {
-                          backgroundColor: "#1876D2",
+                          backgroundColor: "black",
+                          color: "white",
                         },
                       }}
                     >
