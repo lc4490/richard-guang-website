@@ -78,7 +78,7 @@ const Header = ({
               },
             }}
           >
-            {t("Listing")}
+            {t("Listings")}
           </Button>
           <Button
             disableRipple
@@ -265,7 +265,7 @@ const Header = ({
                   },
                 }}
               >
-                {t("Listing")}
+                {t("Listings")}
               </Button>
               <Button
                 href="/foreign-investor-guide"

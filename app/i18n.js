@@ -7,7 +7,7 @@ const resources = {
     translation: {
       "RICHARD GUANG": "RICHARD GUANG",
       About: "About",
-      Listing: "Listings",
+      Listings: "LISTINGS",
       "Foreign Investor Guide": "FOREIGN INVESTOR GUIDE",
       "Neighborhood Guide": "Neighborhood Guide",
       Contact: "CONTACT",
@@ -168,7 +168,7 @@ const resources = {
     translation: {
       "RICHARD GUANG": "管赐盛",
       About: "关于管赐盛",
-      Listing: "房源列表",
+      Listings: "房源列表",
       "Foreign Investor Guide": "外国投资者指南",
       "Neighborhood Guide": "社区指南",
       Contact: "联系我",
