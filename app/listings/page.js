@@ -205,6 +205,15 @@ export default function Home() {
                   >
                     {t("View Details")}
                   </Button>
+                  <Button
+                    href={"/contact"}
+                    // target="_blank"
+                    variant="contained"
+                    color="primary"
+                    sx={{ borderRadius: "50px" }}
+                  >
+                    {t("Inquire")}
+                  </Button>
                 </CardActions>
               </Card>
             </Grid>
