@@ -150,7 +150,7 @@ export default function Home() {
                       {listing.address}
                     </Typography>
                     <Typography variant="body2" color="textSecondary">
-                      {listing.location} New York, New York,{" "}
+                      {listing.location}, New York, New York,{" "}
                       {listing.postal_code}
                     </Typography>
                     <Typography

@@ -162,6 +162,8 @@ const resources = {
       Message: "Message",
       Send: "Send",
       WECHAT: "WECHAT",
+      "View Details": "View Details",
+      Inquire: "Inquire",
     },
   },
   cn: {
@@ -320,6 +322,8 @@ const resources = {
       Message: "讯息",
       Send: "发送",
       WECHAT: "微信",
+      "View Details": "查看详情",
+      Inquire: "询问",
     },
   },
 };
