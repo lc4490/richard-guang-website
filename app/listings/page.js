@@ -39,15 +39,18 @@ export default function Home() {
 
   useEffect(() => {
     const fetchCsv = async () => {
-      const response = await fetch("/data.csv"); // Fetch the CSV from the public directory
-      const reader = response.body.getReader();
-      const result = await reader.read(); // Read the file
-      const decoder = new TextDecoder("utf-8");
-      const csvText = decoder.decode(result.value); // Decode the file
+      const response = await fetch(
+        "https://docs.google.com/spreadsheets/d/1GfWOVfwNV4iXUGgTX7faKVC6FyeX5TGRY5IRiy2_RTY/gviz/tq?tqx=out:csv"
+      );
+      const csvText = await response.text(); // Use .text() to get the full response
+
       Papa.parse(csvText, {
         header: true, // If your CSV has headers
         complete: (results) => {
           setListings(results.data); // Set the parsed data to state
+        },
+        error: (error) => {
+          console.error("Error parsing CSV:", error);
         },
       });
     };
@@ -101,17 +104,18 @@ export default function Home() {
 
         {/* Listings */}
         <Grid container spacing={4} paddingX={2.5}>
-          {listings.map((listing, index) => (
-            <Grid
-              item
-              xs={12}
-              sm={6}
-              md={4}
-              key={index}
-              display="flex"
-              justifyContent="center"
-            >
-              {listing.url && (
+          {listings
+            .filter((listing) => listing.url && listing.address) // Filter out invalid listings
+            .map((listing, index) => (
+              <Grid
+                item
+                xs={12}
+                sm={6}
+                md={4}
+                key={index}
+                display="flex"
+                justifyContent="center"
+              >
                 <Card
                   sx={{
                     width: "100%",
@@ -234,9 +238,8 @@ export default function Home() {
                     </Button>
                   </CardActions>
                 </Card>
-              )}
-            </Grid>
-          ))}
+              </Grid>
+            ))}
         </Grid>
       </Box>
 

@@ -115,6 +115,7 @@ export default function Home() {
         justifyContent={"center"}
         alignItems={"center"}
         flexDirection="column"
+        sx={{ backgroundColor: "#f4f6f8" }}
       >
         <>
           <Typography
@@ -122,6 +123,7 @@ export default function Home() {
               textAlign: "center",
               padding: 5,
               fontSize: isMobile ? "1.5rem" : "2rem",
+              fontFamily: "proxima nova",
             }}
           >
             {t("Your Trusted Partner in Finding your Dream Home")}

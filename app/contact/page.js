@@ -87,6 +87,7 @@ export default function Home() {
           height: "100%",
 
           //   backgroundImage: "url(/house1.png)",
+          backgroundColor: "#f4f6f8", // Light background
           backgroundPosition: "center", // Center the image in the Box
           // backgroundSize: "50%",
 
