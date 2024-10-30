@@ -158,7 +158,7 @@ export default function Home() {
                       sx={{
                         marginTop: 1,
                         fontWeight: "bold",
-                        color: "green",
+                        color: "black",
                       }}
                     >
                       {listing.price__value}
@@ -204,8 +204,13 @@ export default function Home() {
                       href={listing?.url || "#"}
                       target="_blank"
                       variant="contained"
-                      color="primary"
-                      sx={{ borderRadius: "50px" }}
+                      sx={{
+                        borderRadius: "50px",
+                        backgroundColor: "black",
+                        "&:hover": {
+                          backgroundColor: "#1876D2",
+                        },
+                      }}
                     >
                       {t("View Details")}
                     </Button>
@@ -213,8 +218,13 @@ export default function Home() {
                       href={"/contact"}
                       // target="_blank"
                       variant="contained"
-                      color="primary"
-                      sx={{ borderRadius: "50px" }}
+                      sx={{
+                        borderRadius: "50px",
+                        backgroundColor: "black",
+                        "&:hover": {
+                          backgroundColor: "#1876D2",
+                        },
+                      }}
                     >
                       {t("Inquire")}
                     </Button>
